@@ -26,7 +26,9 @@
 			colors: highlighted_states,			
 		    hoverOpacity: 0.9,		    
 		    enableZoom: false,
-		    showTooltip: true,			
+		    showTooltip: true,
+		    pins: { "ha" : "\u003cimg src=\"img/lucky_friday/little_santa.png\" /\u003e" },
+    		pinMode: 'content',			
 			
 			// Отображаем объекты если они есть
 			onLabelShow: function(event, label, code){
@@ -76,3 +78,4 @@
 			$('#vmap').vectorMap('set', 'colors', fregion);
 		});
 	});	
+

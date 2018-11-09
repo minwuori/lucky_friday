@@ -98,21 +98,20 @@ a {
   opacity: 0.9; }
 
 .lucky-friday__header {
-  color: #ffffff; }
-  .lucky-friday__header .lucky-friday__container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%; }
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
   .lucky-friday__header .lucky-friday__logo {
     margin: 20px 40px 20px 0; }
   .lucky-friday__header .lucky-friday__menu {
@@ -128,6 +127,7 @@ a {
             justify-content: flex-end;
     margin-right: 20px; }
   .lucky-friday__header .lucky-friday__menu_item {
+    font-size: 19px;
     height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -161,39 +161,39 @@ a {
   .lucky-friday__header .lucky-friday__menu .active {
     opacity: 1; }
 
-.lucky-friday__first {
+.lucky-friday__first .lucky-friday__img {
+  position: absolute;
+  bottom: 0;
+  left: 80px; }
+
+.lucky-friday__first .lucky-friday__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   color: #ffffff;
   position: relative; }
-  .lucky-friday__first .lucky-friday__img {
-    position: absolute;
-    bottom: 0;
-    left: 80px; }
-  .lucky-friday__first .lucky-friday__container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%; }
-  .lucky-friday__first .lucky-friday__title {
-    margin-top: 40px;
-    font-size: 144px;
-    line-height: 147px;
-    text-align: center;
-    font-family: Helvetica;
-    font-weight: bold; }
-  .lucky-friday__first .lucky-friday__text {
-    margin-top: 40px;
-    margin-bottom: 320px;
-    text-align: center; }
+
+.lucky-friday__first .lucky-friday__title {
+  font-size: 144px;
+  line-height: 147px;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold; }
+
+.lucky-friday__first .lucky-friday__text {
+  margin-top: 40px;
+  text-align: center; }
 
 .lucky-friday__im .lucky-friday__container {
   margin-top: 190px;
