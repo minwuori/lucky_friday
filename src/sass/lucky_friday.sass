@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Helvetica&subset=cyrillic");
+* 
+	margin: 0
+	padding: 0
+
+html 
+	font-size: 18px
+
+body 
+	font-family: Roboto
+	
+a
+	text-decoration: none
+.bg_red
+	background: #eb1c24
+	
+
+.lucky-friday__container
+	max-width: 1260px
+	width: 100%
+	padding-left: 20px
+	padding-right: 20px
+	margin-left: auto
+	font-size: inherit
+	margin-right: auto
+
+.blue 
+	color: #26A9E0
+	
+.white
+	color: #ffffff
+.text-right
+	text-align: right
+
+.lucky-friday__title
+	font-size: 48px
+	text-align: left
+.lucky-friday__subtitle
+	font-size: 36px
+	line-height: 42px
+	margin-right: 20px
+.lucky-friday__text
+	font-size: 24px
+	line-height: 26px
+	text-align: left
+	margin-bottom: 40px
+
+.lucky-friday__text_accent
+	font-weight: bold
+	
+.lucky-friday__text_gray
+	color: rgba(0, 0, 0, 0.3)
+	font-size: 16px
+	
+.lucky-friday__content
+	display: flex
+	display: inline-flex
+	align-items: center
+	
+.lucky-friday__button
+	border-radius: 8px 
+	background: #74489D
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #FFFFFF 
+	font-size: 24px
+	line-height: 28px
+	text-align: center
+	box-shadow: 2px 10px 66px -9px #74489D
+.lucky-friday__button:hover 
+	opacity: 0.9
+	 
+.lucky-friday__header
+	color: #ffffff
+	.lucky-friday__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 100%
+	.lucky-friday__logo
+		margin: 20px 40px 20px 0
+	.lucky-friday__menu
+		list-style: none
+		border: none
+		display: flex
+		justify-content: flex-end
+		margin-right: 20px
+	.lucky-friday__menu_item
+		height: 100%
+		display: flex
+		align-items: center
+		margin-right: 30px
+	.lucky-friday__menu a
+		color: inherit
+		opacity: 0.6 
+		text-decoration: none
+		cursor: pointer
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center 
+	.lucky-friday__menu a:hover
+		opacity: 1
+	.lucky-friday__menu .active
+		opacity: 1
+.lucky-friday__first
+	color: #ffffff
+	position: relative
+	.lucky-friday__img
+		position: absolute
+		bottom: 0
+		left: 80px
+	.lucky-friday__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 100%
+	.lucky-friday__title
+		margin-top: 40px
+		font-size: 144px
+		line-height: 147px
+		text-align: center
+		font-family: Helvetica
+		font-weight: bold
+	.lucky-friday__text
+		margin-top: 40px
+		margin-bottom: 320px
+		text-align: center
+.lucky-friday__im
+	.lucky-friday__container
+		margin-top: 190px
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: 100%
+	.lucky-friday__title
+		font-size: 64px
+		line-height: 71px
+		color: #EB1C24
+		text-align: center
+		font-weight: bold
+	.lucky-friday__text
+		margin-top: 20px
+		margin-bottom: 45px
+		text-align: center
+	.lucky-friday__slider
+		display: flex
+		align-items: center
+		height: 100%
+		cursor: pointer
+		.active
+			border: 6px solid #EB1C24;
+			
+	.lucky-friday__date
+		width: 80px
+		height: 80px
+		border: solid 1px rgba(0, 0, 0, 0.1)
+		display: flex
+		flex-direction: column
+		-webkit-align-items: center
+		 align-items: center
+		justify-content: center 
+	.lucky-friday__day
+		font-size: 36px
+		font-weight: bold
+	.lucky-friday__date:last-child
+		color: #EB1C24
+	.lucky-friday__date:first-child
+		color: #EB1C24
+	
+	.lucky-friday__map
+		position: relative
+		width: 100%
+		display: flex
+		justify-content: center
+		margin-bottom: 200px
+		.lucky-friday__choice
+			position: absolute
+			right: 0
+			a
+				color: black
+				font-size: 12px
+				text-decoration: underline
+			.lucky-friday__choice-map
+				display: inline-block
+				margin: 30px
+			.lucky-friday__choice-list
+				display: inline-block
+			.active
+				color: #EB1C24
+				text-decoration: none
+		svg
+			
+			margin: 0 auto
+		path
+			cursor: pointer;
+			-webkit-transition: all 150ms
+			-moz-transition: all 150ms
+			-o-transition: all 150ms
+			transition: all 150ms
+	
+		path:hover
+			fill: #EB1C24
+		
+@media(max-width: 1850px)
+	.lucky-friday__circle-8
+		display: none
+	.lucky-friday__circle-7 
+  		display: none
+@media(max-width: 1550px)
+  	.lucky-friday__circle-1
+  		display: none
+  	.lucky-friday__circle-2
+  		display: none
+  	.lucky-friday__circle-9
+  		display: none	
+  	.lucky-friday__circle-11
+  		display: none	
+
+
+
