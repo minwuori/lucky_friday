@@ -389,7 +389,7 @@ button:hover {
   height: 100%;
   cursor: pointer; }
   .lucky-friday__im .calendar .active, .lucky-friday__im .calendar .active:hover {
-    border: 6px solid #EB1C24; }
+    outline: 6px solid #EB1C24; }
     .lucky-friday__im .calendar .active .date__img, .lucky-friday__im .calendar .active:hover .date__img {
       display: block; }
 

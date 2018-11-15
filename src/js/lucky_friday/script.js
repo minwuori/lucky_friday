@@ -103,6 +103,8 @@ $(document).ready(function() {
 		else if ($(this).scrollTop() < 800){
 			$('.lucky-friday__img-santa').removeClass("right");
 			$('.lucky-friday__img-santa').addClass("none");
+			$(".menu__item").removeClass('active');
+			$(".menu__item:eq(0)").addClass('active');
 		}
 	});
 
@@ -171,7 +173,17 @@ $(document).ready(function() {
             anchor.addClass("active");
         }
         $("html, body").animate({
-            scrollTop: $(anchor.attr("href")).offset().top
+            scrollTop: $(anchor.attr("href")).offset().top - 190
+        }, 1000);
+ 	});
+
+ 	//плавный скрол страницы при клике на меню header
+ 	$('.lucky-friday__img-down').click(function() {
+ 		
+ 		var hash=window.location.hash;
+ 		var anchor=$(this);
+        $("html, body").animate({
+            scrollTop: $(anchor.attr("href")).offset().top - 190
         }, 1000);
  	});
 
