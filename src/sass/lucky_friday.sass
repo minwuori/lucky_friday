@@ -12,19 +12,19 @@ body
 	font-family: Roboto
 	
 a
-	text-decoration: none
+	text-decoration: underline
+	color: black
 .bg
 	position: relative
 	background: transparent 	
 
 .container
 	max-width: 1260px
-	min-width: 940px
+	min-width: 970px
 	width: 100%
-	padding-left: 20px
-	padding-right: 20px
 	margin: 0 auto
 	font-size: inherit
+	padding: 0 20px 
 		
 .blue 
 	color: #26A9E0
@@ -40,14 +40,30 @@ a
 	color: #EB1C24
 	text-align: center
 	font-weight: bold
+	margin-bottom: 90px
 
 .text
 	font-size: 24px
 	line-height: 26px
 	text-align: center
 	margin-bottom: 40px
-	margin-top: 25px
+.text_accent
+	font-weight: bold
+	
+.text_color
+	color: #EB1C24
+	
+.text_conditional
+	font-size: 16px
+	line-height: 28px
 
+.link
+	color: #EB1C24
+	text-decoration: underline
+	cursor: pointer
+.link:hover
+	color: #CB1B22
+	
 .vertical-text
 	writing-mode: tb-rl
 	transform:rotate(360deg)
@@ -61,19 +77,21 @@ a
 	align-items: center
 	justify-content: center	
 	
-.lucky-friday__button
-	border-radius: 8px 
-	background: #74489D
-	display: flex
-	justify-content: center
-	align-items: center
-	color: #FFFFFF 
+button
+	background: #EB1C24
+	border: 0
+	outline: 0 
+	color: #ffffff
 	font-size: 24px
-	line-height: 28px
-	text-align: center
-	box-shadow: 2px 10px 66px -9px #74489D
-.lucky-friday__button:hover 
-	opacity: 0.9
+	cursor: pointer
+	-webkit-border-radius: 36px 
+	border-radius: 36px 
+	font-size: 24px
+	box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25)
+	
+button:hover
+	background: #D61B23
+	
 .animate-1
 	animation: pulse 9s infinite
 .animate-2
@@ -103,19 +121,19 @@ a
 	width: 100%
 	.header__logo
 		margin: 20px 40px 20px 0
-	.header__menu
+	.menu
 		list-style: none
 		border: none
 		display: flex
 		justify-content: flex-end
 		margin-right: 20px
-	.header__menu_item
+	.menu__item
 		font-size: 19px
 		height: 100%
 		display: flex
 		align-items: center
 		margin-right: 30px
-	.header__menu a
+	.menu a
 		color: inherit
 		opacity: 0.6 
 		text-decoration: none
@@ -124,9 +142,9 @@ a
 		display: flex
 		justify-content: center
 		align-items: center 
-	.header__menu a:hover
+	.menu a:hover
 		opacity: 1
-	.header__menu .active
+	.menu .active
 		opacity: 1
 		
 .lucky-friday__first
@@ -145,7 +163,7 @@ a
 		
 	.snowflake-2
 		position: absolute
-		top: 40px
+		top: 5px
 		left: 464px
 	.snowflake-3
 		position: absolute
@@ -157,11 +175,11 @@ a
 		left: 248px
 	.snowflake-5
 		position: absolute
-		top: 200px
+		top: 110px
 		left: 408px
 	.snowflake-6
 		position: absolute
-		top: 179px
+		top: 70px
 		left: 719px
 	.snowflake-7
 		position: absolute
@@ -206,7 +224,7 @@ a
 	.snowflake-17
 		position: absolute
 		bottom: 182px
-		left: 660px
+		left: 49%
 	.snowflake-18
 		position: absolute
 		bottom: 124px
@@ -230,7 +248,6 @@ a
 		left: 80px
 		-webkit-transition: all 5s ease
 		transition: all 5s ease
-	.lucky-friday__img-santa
 		&.right
 			left: 2500px
 			bottom: 0
@@ -239,7 +256,7 @@ a
 	.lucky-friday__img-down
 		position: absolute
 		bottom: 60px
-		left: 50%
+		left: 48%
 		cursor: pointer
 	.container
 		margin-top: -43px
@@ -250,13 +267,6 @@ a
 		align-items: center
 		display: flex
 		justify-content: center
-	.title
-		font-size: 144px
-		line-height: 147px
-		text-align: center
-		font-family: Helvetica
-		font-weight: bold
-		color: #ffffff
 	.text
 		margin-top: 40px
 		text-align: center
@@ -270,22 +280,15 @@ a
 		align-items: center
 		height: 100%
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-	.title
-		font-size: 64px
-		line-height: 71px
-		color: #EB1C24
-		text-align: center
-		font-weight: bold
 	.text
-		margin-bottom: 90px
 		text-align: center
-	.lucky-friday__slider
+	.calendar
 		display: flex
 		align-items: center
 		height: 100%
 		cursor: pointer
 		
-		.active
+		.active, .active:hover
 			border: 6px solid #EB1C24
 			.date__img
 				display: block
@@ -298,10 +301,15 @@ a
 		width: 80px
 		height: 80px
 		border: solid 1px rgba(0, 0, 0, 0.1)
+		display: flex
 		flex-direction: column
 		justify-content: center
 		position: relative
 		margin-bottom: 94px
+		margin-top: 50px
+		text-align: center
+	.date:hover
+		border: 1px solid #EB1C24
 	.date__img
 		position: absolute
 		top: -50px
@@ -314,40 +322,111 @@ a
 		color: #EB1C24
 	.date:first-child
 		color: #EB1C24
-	
-	.lucky-friday__map
-		position: relative
-		width: 100%
-		display: flex
-		justify-content: center
-		margin-bottom: 200px 
-		svg
-			margin: 0 auto
-			overflow: visible
-		.region
-			cursor: pointer;
-			-webkit-transition: all 150ms
-			-moz-transition: all 150ms
-			-o-transition: all 150ms
-			transition: all 150ms
-			&.active
-				path
-					fill: #EB1C24
-		.region:hover path
-			fill: #EB1C24
-
+	.btn
+		width: 400px 
+		height: 72px
+		margin-bottom: 200px
+		.btn__icon
+			background: url(/img/lucky_friday/bell.png) no-repeat
+			padding: 5px 30px 0 20px
+	.btn__go
+		width: 400px 
+		height: 72px
+		margin-bottom: 200px
+		display: none
+		.btn__icon
+			background: url(/img/lucky_friday/santa_btn.png) no-repeat	
+			padding: 5px 50px 0 20px
 			
-		.marker
-			cursor: pointer;
-			-webkit-transition: all 150ms
-			-moz-transition: all 150ms
-			-o-transition: all 150ms
-			transition: all 150ms
-			&.active
-				path
-					fill-opacity: 1 
-		.marker:hover path
-			fill-opacity: 1	
+.lucky-friday__map
+	position: relative
+	width: 100%
+	display: flex
+	justify-content: center
+	margin-bottom: 100px 
+	svg
+		margin: 0 auto
+		overflow: visible
+	.region
+		cursor: pointer;
+		-webkit-transition: all 150ms
+		-moz-transition: all 150ms
+		-o-transition: all 150ms
+		transition: all 150ms
+		&.active, &.active:hover, &.full, &.full:hover
+			path
+				fill: #EB1C24
+		
+	.region:hover path
+		fill: #CCCCCC
+
+		
+	.marker
+		cursor: pointer;
+		-webkit-transition: all 150ms
+		-moz-transition: all 150ms
+		-o-transition: all 150ms
+		transition: all 150ms
+		&.active
+			path
+				fill-opacity: 1 
+	.marker-full_30
+		cursor: pointer
+		display: none
+	.marker-full_14
+		cursor: pointer
+		display: none
+	.popup
+		position: absolute
+		width: 700px
+		height: 723px
+		box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15) 
+		-webkit-border-radius: 16px 
+		border-radius: 16px 
+		background: rgba(255, 255, 255, 0.9)
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		&.none 
+			display: none
+	.popup__title
+		font-size: 64px
+		line-height: 72px
+		font-family: Roboto
+		text-align: center
+		color: #ffffff
+		background: #E71C23 
+		border-top-left-radius: 16px
+		border-top-right-radius: 16px
+		height: 206px 
+		width: 100% 
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		 
+	.popup__content
+		height: 517px
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		.text_conditional
+			font-size: 14px 
+			line-height: 16px
+			margin-bottom: 96px
+	.popup__btn
+		width: 270px
+		height: 72px
+		 
+				
 .lucky-friday__klp
 	.container
 		position: relative 
@@ -358,7 +437,7 @@ a
 		height: 100%
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
 	.text
-		margin-bottom: 70px
+		margin-bottom: 90px
 	.content
 		display: inline-flex
 		margin-bottom: 130px
@@ -366,10 +445,7 @@ a
 		text-align: left
 		margin-left: 45px
 		line-height: 28px
-		a
-			color: #EB1C24
-			text-decoration: underline
-			cursor: pointer
+		font-size: 24px
 	.vertical-text		
 		position: absolute
 		left: 0
@@ -384,17 +460,11 @@ a
 		align-items: center
 		height: 100%
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
-	.title
-		margin-bottom: 25px
 	.text
-		margin-bottom: 40px
-		margin-top: 0
 		text-align: left
-		width: 940px
-	.conditional
-		font-size: 16px
-		line-height: 28px
-		margin-bottom: 190px 
+		max-width: 940px
+	.text_conditional
+		margin-bottom: 190px
 .footer
 	&.bg
 		background: #EB1C24
@@ -432,8 +502,16 @@ a
 	.footer__menu a:hover
 		opacity: 1
 		
-@media(max-width: 940px)
+@media(max-width: 970px)
 	overflow-x: scroll
+	
+	.lucky-friday__klp
+		.text
+			width: 850px
+
+@media(max-width: 1360px)
+	.header
+		margin-left: 60px
 
 
 

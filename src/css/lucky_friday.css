@@ -12,7 +12,8 @@ body {
   font-family: Roboto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: underline;
+  color: black; }
 
 .bg {
   position: relative;
@@ -20,12 +21,11 @@ a {
 
 .container {
   max-width: 1260px;
-  min-width: 940px;
+  min-width: 970px;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
-  font-size: inherit; }
+  font-size: inherit;
+  padding: 0 20px; }
 
 .blue {
   color: #26A9E0; }
@@ -41,14 +41,32 @@ a {
   line-height: 71px;
   color: #EB1C24;
   text-align: center;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 90px; }
 
 .text {
   font-size: 24px;
   line-height: 26px;
   text-align: center;
-  margin-bottom: 40px;
-  margin-top: 25px; }
+  margin-bottom: 40px; }
+
+.text_accent {
+  font-weight: bold; }
+
+.text_color {
+  color: #EB1C24; }
+
+.text_conditional {
+  font-size: 16px;
+  line-height: 28px; }
+
+.link {
+  color: #EB1C24;
+  text-decoration: underline;
+  cursor: pointer; }
+
+.link:hover {
+  color: #CB1B22; }
 
 .vertical-text {
   -webkit-writing-mode: tb-rl;
@@ -73,31 +91,21 @@ a {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.lucky-friday__button {
-  -webkit-border-radius: 8px;
-          border-radius: 8px;
-  background: #74489D;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #FFFFFF;
+button {
+  background: #EB1C24;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
   font-size: 24px;
-  line-height: 28px;
-  text-align: center;
-  -webkit-box-shadow: 2px 10px 66px -9px #74489D;
-          box-shadow: 2px 10px 66px -9px #74489D; }
+  cursor: pointer;
+  -webkit-border-radius: 36px;
+  border-radius: 36px;
+  font-size: 24px;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
+          box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
 
-.lucky-friday__button:hover {
-  opacity: 0.9; }
+button:hover {
+  background: #D61B23; }
 
 .animate-1 {
   -webkit-animation: pulse 9s infinite;
@@ -153,7 +161,7 @@ a {
   width: 100%; }
   .header .header__logo {
     margin: 20px 40px 20px 0; }
-  .header .header__menu {
+  .header .menu {
     list-style: none;
     border: none;
     display: -webkit-box;
@@ -165,7 +173,7 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-right: 20px; }
-  .header .header__menu_item {
+  .header .menu__item {
     font-size: 19px;
     height: 100%;
     display: -webkit-box;
@@ -177,7 +185,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     margin-right: 30px; }
-  .header .header__menu a {
+  .header .menu a {
     color: inherit;
     opacity: 0.6;
     text-decoration: none;
@@ -195,9 +203,9 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .header .header__menu a:hover {
+  .header .menu a:hover {
     opacity: 1; }
-  .header .header__menu .active {
+  .header .menu .active {
     opacity: 1; }
 
 .lucky-friday__first {
@@ -227,7 +235,7 @@ a {
     left: -140px; }
   .lucky-friday__first .snowflake-2 {
     position: absolute;
-    top: 40px;
+    top: 5px;
     left: 464px; }
   .lucky-friday__first .snowflake-3 {
     position: absolute;
@@ -239,11 +247,11 @@ a {
     left: 248px; }
   .lucky-friday__first .snowflake-5 {
     position: absolute;
-    top: 200px;
+    top: 110px;
     left: 408px; }
   .lucky-friday__first .snowflake-6 {
     position: absolute;
-    top: 179px;
+    top: 70px;
     left: 719px; }
   .lucky-friday__first .snowflake-7 {
     position: absolute;
@@ -288,7 +296,7 @@ a {
   .lucky-friday__first .snowflake-17 {
     position: absolute;
     bottom: 182px;
-    left: 660px; }
+    left: 49%; }
   .lucky-friday__first .snowflake-18 {
     position: absolute;
     bottom: 124px;
@@ -312,17 +320,17 @@ a {
     -webkit-transition: all 5s ease;
     -o-transition: all 5s ease;
     transition: all 5s ease; }
-  .lucky-friday__first .lucky-friday__img-santa.right {
-    left: 2500px;
-    bottom: 0; }
-  .lucky-friday__first .lucky-friday__img-santa.none {
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none; }
+    .lucky-friday__first .lucky-friday__img-santa.right {
+      left: 2500px;
+      bottom: 0; }
+    .lucky-friday__first .lucky-friday__img-santa.none {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; }
   .lucky-friday__first .lucky-friday__img-down {
     position: absolute;
     bottom: 60px;
-    left: 50%;
+    left: 48%;
     cursor: pointer; }
   .lucky-friday__first .container {
     margin-top: -43px;
@@ -344,13 +352,6 @@ a {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .lucky-friday__first .title {
-    font-size: 144px;
-    line-height: 147px;
-    text-align: center;
-    font-family: Helvetica;
-    font-weight: bold;
-    color: #ffffff; }
   .lucky-friday__first .text {
     margin-top: 40px;
     text-align: center; }
@@ -373,18 +374,10 @@ a {
   height: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-.lucky-friday__im .title {
-  font-size: 64px;
-  line-height: 71px;
-  color: #EB1C24;
-  text-align: center;
-  font-weight: bold; }
-
 .lucky-friday__im .text {
-  margin-bottom: 90px;
   text-align: center; }
 
-.lucky-friday__im .lucky-friday__slider {
+.lucky-friday__im .calendar {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -395,9 +388,9 @@ a {
           align-items: center;
   height: 100%;
   cursor: pointer; }
-  .lucky-friday__im .lucky-friday__slider .active {
+  .lucky-friday__im .calendar .active, .lucky-friday__im .calendar .active:hover {
     border: 6px solid #EB1C24; }
-    .lucky-friday__im .lucky-friday__slider .active .date__img {
+    .lucky-friday__im .calendar .active .date__img, .lucky-friday__im .calendar .active:hover .date__img {
       display: block; }
 
 .lucky-friday__im .vertical-text {
@@ -409,6 +402,10 @@ a {
   width: 80px;
   height: 80px;
   border: solid 1px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -419,7 +416,12 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  margin-bottom: 94px; }
+  margin-bottom: 94px;
+  margin-top: 50px;
+  text-align: center; }
+
+.lucky-friday__im .date:hover {
+  border: 1px solid #EB1C24; }
 
 .lucky-friday__im .date__img {
   position: absolute;
@@ -436,7 +438,24 @@ a {
 .lucky-friday__im .date:first-child {
   color: #EB1C24; }
 
-.lucky-friday__im .lucky-friday__map {
+.lucky-friday__im .btn {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 200px; }
+  .lucky-friday__im .btn .btn__icon {
+    background: url(/img/lucky_friday/bell.png) no-repeat;
+    padding: 5px 30px 0 20px; }
+
+.lucky-friday__im .btn__go {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 200px;
+  display: none; }
+  .lucky-friday__im .btn__go .btn__icon {
+    background: url(/img/lucky_friday/santa_btn.png) no-repeat;
+    padding: 5px 50px 0 20px; }
+
+.lucky-friday__map {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -447,28 +466,116 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 200px; }
-  .lucky-friday__im .lucky-friday__map svg {
+  margin-bottom: 100px; }
+  .lucky-friday__map svg {
     margin: 0 auto;
     overflow: visible; }
-  .lucky-friday__im .lucky-friday__map .region {
+  .lucky-friday__map .region {
     cursor: pointer;
     -webkit-transition: all 150ms;
     -o-transition: all 150ms;
     transition: all 150ms; }
-    .lucky-friday__im .lucky-friday__map .region.active path {
+    .lucky-friday__map .region.active path, .lucky-friday__map .region.active:hover path, .lucky-friday__map .region.full path, .lucky-friday__map .region.full:hover path {
       fill: #EB1C24; }
-  .lucky-friday__im .lucky-friday__map .region:hover path {
-    fill: #EB1C24; }
-  .lucky-friday__im .lucky-friday__map .marker {
+  .lucky-friday__map .region:hover path {
+    fill: #CCCCCC; }
+  .lucky-friday__map .marker {
     cursor: pointer;
     -webkit-transition: all 150ms;
     -o-transition: all 150ms;
     transition: all 150ms; }
-    .lucky-friday__im .lucky-friday__map .marker.active path {
+    .lucky-friday__map .marker.active path {
       fill-opacity: 1; }
-  .lucky-friday__im .lucky-friday__map .marker:hover path {
-    fill-opacity: 1; }
+  .lucky-friday__map .marker-full_30 {
+    cursor: pointer;
+    display: none; }
+  .lucky-friday__map .marker-full_14 {
+    cursor: pointer;
+    display: none; }
+  .lucky-friday__map .popup {
+    position: absolute;
+    width: 700px;
+    height: 723px;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .lucky-friday__map .popup.none {
+      display: none; }
+  .lucky-friday__map .popup__title {
+    font-size: 64px;
+    line-height: 72px;
+    font-family: Roboto;
+    text-align: center;
+    color: #ffffff;
+    background: #E71C23;
+    -webkit-border-top-left-radius: 16px;
+            border-top-left-radius: 16px;
+    -webkit-border-top-right-radius: 16px;
+            border-top-right-radius: 16px;
+    height: 206px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .lucky-friday__map .popup__content {
+    height: 517px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .lucky-friday__map .popup__content .text_conditional {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 96px; }
+  .lucky-friday__map .popup__btn {
+    width: 270px;
+    height: 72px; }
 
 .lucky-friday__klp .container {
   position: relative;
@@ -490,7 +597,7 @@ a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .lucky-friday__klp .text {
-  margin-bottom: 70px; }
+  margin-bottom: 90px; }
 
 .lucky-friday__klp .content {
   display: -webkit-inline-box;
@@ -502,11 +609,8 @@ a {
 .lucky-friday__klp .content__text {
   text-align: left;
   margin-left: 45px;
-  line-height: 28px; }
-  .lucky-friday__klp .content__text a {
-    color: #EB1C24;
-    text-decoration: underline;
-    cursor: pointer; }
+  line-height: 28px;
+  font-size: 24px; }
 
 .lucky-friday__klp .vertical-text {
   position: absolute;
@@ -532,18 +636,11 @@ a {
   height: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-.lucky-friday__rules .title {
-  margin-bottom: 25px; }
-
 .lucky-friday__rules .text {
-  margin-bottom: 40px;
-  margin-top: 0;
   text-align: left;
-  width: 940px; }
+  max-width: 940px; }
 
-.lucky-friday__rules .conditional {
-  font-size: 16px;
-  line-height: 28px;
+.lucky-friday__rules .text_conditional {
   margin-bottom: 190px; }
 
 .footer.bg {
@@ -618,5 +715,11 @@ a {
 .footer .footer__menu a:hover {
   opacity: 1; }
 
-@media (max-width: 940px) {
-  overflow-x: scroll; }
+@media (max-width: 970px) {
+  overflow-x: scroll;
+  .lucky-friday__klp .text {
+    width: 850px; } }
+
+@media (max-width: 1360px) {
+  .header {
+    margin-left: 60px; } }

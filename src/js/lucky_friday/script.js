@@ -92,36 +92,156 @@
  	  }	  
  	});
  */
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){ 
-    $('.lucky-friday__img-santa').removeClass("none");
-    $('.lucky-friday__img-santa').addClass("right");
-  }
-  else if ($(this).scrollTop() < 800){
-    $('.lucky-friday__img-santa').removeClass("right");
-    $('.lucky-friday__img-santa').addClass("none");
 
-  }
-});
 $(document).ready(function() {
+	//анимашка санты на главной
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1){ 
+			$('.lucky-friday__img-santa').removeClass("none");
+			$('.lucky-friday__img-santa').addClass("right");
+		}
+		else if ($(this).scrollTop() < 800){
+			$('.lucky-friday__img-santa').removeClass("right");
+			$('.lucky-friday__img-santa').addClass("none");
+		}
+	});
 
+	//проверка на дату
+	
+
+	var day = "15.11.2018", // дата в формате день.месяц.год 
+		today = new Date()
+		
+	//двух строчек ниже можно избежать если сразу присылать дату в формате месяц/день/год
+	day = day.split('.');
+	day = day[1]+'/'+day[0]+'/'+day[2] ;
+
+   // data = data.join('/').replace(/(^|\/)(\d)(?=\/)/g,"$10$2");
+
+
+	day = new Date(Date.parse(day));
+	day.setDate(day.getDate());
+
+	var days;
+	days = new Date(Date.parse(day));
+	day.setDate(day.getDate() + 1);
+
+	console.log(day);
+	console.log(days);
+
+
+
+	if (day.getTime()>=today.getTime() && today.getTime() <= days.getTime()) {
+	 //показываем контент 
+		console.log('ok');
+		console.log(new Date());
+	} else if (today.getTime() > day.getTime()){
+	 //скрываем контент 
+		console.log('more');
+		console.log(new Date());
+	} else {
+		console.log('no');
+		console.log(new Date());
+	}
+	// var period, 
+	// 	today = new Date()
+	// function checkDate(period) {
+	// 	var periods = period.split(',');
+
+	// 	if (today >= new Date(periods[0]) && today <= new Date(periods[1])){
+	// 	    console.log('УРА!');
+
+	// 	}else if (today > ){
+	// 	    console.log('ЖАЛЬ :(');
+	// 	}
+	// }
+
+	// checkDate('2018-11-15,2018-11-16');
+
+
+
+	//плавный скрол страницы при клике на меню header
+ 	$('.menu__item').click(function() {
+ 		$(".menu__item").removeClass('active');
+ 		$(this).addClass('active');
+ 		var hash=window.location.hash;
+ 		var anchor=$(this);
+        if(hash){
+            $(".menu__item").removeClass("active");
+            anchor.addClass("active");
+        }
+        $("html, body").animate({
+            scrollTop: $(anchor.attr("href")).offset().top
+        }, 1000);
+ 	});
+
+ 	//клик на карту
 	$('.region').click(function() {
 		
 		var region = $(this).data('region');
-		console.log(region);
-    //выборка по соответствию data-region в map с data-date в slider
-		$('.lucky-friday__slider:not([data-date~=' + region + '])').removeClass('active');
-		$('.lucky-friday__slider[data-date~=' + region + ']').addClass('active');
+    	//выборка по соответствию data-region в map с data-date в slider
+		$('.date:not([data-date~=' + region + '])').removeClass('active');
+		$('.date[data-date~=' + region + ']').addClass('active');
+
+		$('.marker:not([data-marker~=' + region + '])').removeClass('active');
+		$('.marker[data-marker~=' + region + ']').addClass('active');
+
+		$('.marker-full_30').css('display', 'none');
+		$('.marker-full_14').css('display', 'none');
+		$('.region').removeClass('full');
+		$('.marker').css('display', 'block');
+
 		$('.region').removeClass('active');
-		$('.marker[data-marker~=' + region + ']').css('fill-opacity', '1');
 		$(this).addClass('active');
 	});
 
+	//клик на календарь
 	$('.date').click(function(){
-		$('.lucky-friday__slider').removeClass('active');
-		$(this).addClass('active');
+		var date = $(this).data('date');
+
+		if (date == 14){
+			$('.region').addClass('full');
+			$('.marker').css('display', 'none');
+			$('.marker-full_30').css('display', 'none');
+			$('.marker-full_14').css('display', 'block');
+			$('.date').removeClass('active');
+			$(this).addClass('active');
+		} else if (date == 30){
+			$('.region').addClass('full');
+			$('.marker').css('display', 'none');
+			$('.marker-full_14').css('display', 'none');
+			$('.marker-full_30').css('display', 'block');
+			$('.date').removeClass('active');
+			$(this).addClass('active');
+		} else {
+			$('.region').removeClass('full');
+			$('.region:not([data-region~=' + date + '])').removeClass('active');
+			$('.region[data-region~=' + date + ']').addClass('active');
+
+			$('.marker').css('display', 'block');
+			$('.marker:not([data-marker~=' + date + '])').removeClass('active');
+			$('.marker[data-marker~=' + date + ']').addClass('active');
+			$('.marker-full_30').css('display', 'none');
+			$('.marker-full_14').css('display', 'none');
+
+			$('.marker').css('display', 'block');
+			$('.date').removeClass('active');
+			$(this).addClass('active');
+		}
+
 	});
+
+	//клик на маркер
 	$('.marker').click(function(){
-		console.log($(this).data('marker'));
+		var marker = $(this).data('marker');
+    	//выборка по соответствию data-marker в map с data-date в slider
+		$('.date:not([data-date~=' + marker + '])').removeClass('active');
+		$('.date[data-date~=' + marker + ']').addClass('active');
+
+		$('.region:not([data-region~=' + marker + '])').removeClass('active');
+		$('.region[data-region~=' + marker + ']').addClass('active');
+
+		$('.marker').removeClass('active');
+		$(this).addClass('active');
 	});
 });
