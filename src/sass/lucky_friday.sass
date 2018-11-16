@@ -14,6 +14,13 @@ body
 a
 	text-decoration: underline
 	color: black
+	
+.lucky-friday
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+
 .bg
 	position: relative
 	background: transparent 	
@@ -111,6 +118,193 @@ button:hover
 
 	100%
 		opacity: 0
+		
+.blur-in
+	-webkit-animation: blur 1s forwards;
+	-moz-animation: blur 1s forwards;
+	-o-animation: blur 1s forwards;
+	animation: blur 1s forwards;
+
+.blur-out
+	-webkit-animation: blur-out 1s forwards;
+	-moz-animation: blur-out 1s forwards;
+	-o-animation: blur-out 1s forwards;
+	animation: blur-out 1s forwards;
+
+@-webkit-keyframes blur 
+	0%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+	100%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+@-moz-keyframes blur
+	0%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+	100% 
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+@-o-keyframes blur
+	0%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+	100%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+@keyframes blur
+	0%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+
+	100%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+@-webkit-keyframes blur-out
+	0%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+	100%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+
+@-moz-keyframes blur-out
+	0%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+	100%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+@-o-keyframes blur-out
+	0%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+	100%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+@keyframes blur-out
+	0%
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+	100%
+		-webkit-filter: blur(0px);
+		-moz-filter: blur(0px);
+		-o-filter: blur(0px);
+		-ms-filter: blur(0px);
+		filter: blur(0px);
+
+.popup
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 2
+	background: rgba(255, 255, 255, 0.9)
+	overflow: scroll
+	.close
+		position: absolute
+		right: 20px
+		top: 20px
+		z-index: 4
+		cursor: pointer
+	.close:hover
+			path
+				fill: #EB1C24
+	.container
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		padding: 0
+	.title
+		margin-bottom: 85px	 
+	.text
+		line-height: 28px
+		margin-bottom: 24px
+	.content
+		display: flex
+		-webkit-justify-content: center
+		justify-content: center
+	.content__list
+		list-style: none
+		border: none
+		text-align: center
+		font-size: 24px
+		line-height: 39px
+	
+.popup:nth-child(7)
+	.content__list
+		text-align: left
+		margin-right: 20px
+		width: 300px
+	.content__list:last-child
+		margin-right: 0
 		 
 .header
 	color: #ffffff
@@ -353,9 +547,13 @@ button:hover
 		-moz-transition: all 150ms
 		-o-transition: all 150ms
 		transition: all 150ms
-		&.active, &.active:hover, &.full, &.full:hover
+		&.active, &.full, &.full:hover
 			path
 				fill: #EB1C24
+		&.active:hover
+			path
+				fill: #D61B23
+
 		
 	.region:hover path
 		fill: #CCCCCC
@@ -376,57 +574,9 @@ button:hover
 	.marker-full_14
 		cursor: pointer
 		display: none
-	.popup
-		position: absolute
-		width: 700px
-		height: 723px
-		box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.15) 
-		-webkit-border-radius: 16px 
-		border-radius: 16px 
-		background: rgba(255, 255, 255, 0.9)
-		display: flex
-		-webkit-flex-direction: column
-		-ms-flex-direction: column
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		&.none 
-			display: none
-	.popup__title
-		font-size: 64px
-		line-height: 72px
-		font-family: Roboto
-		text-align: center
-		color: #ffffff
-		background: #E71C23 
-		border-top-left-radius: 16px
-		border-top-right-radius: 16px
-		height: 206px 
-		width: 100% 
-		display: flex
-		-webkit-flex-direction: column
-		-ms-flex-direction: column
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		 
-	.popup__content
-		height: 517px
-		display: flex
-		-webkit-flex-direction: column
-		-ms-flex-direction: column
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		.text_conditional
-			font-size: 14px 
-			line-height: 16px
-			margin-bottom: 96px
-	.popup__btn
-		width: 270px
-		height: 72px
-		 
-				
+		
+
+
 .lucky-friday__klp
 	.container
 		position: relative 

@@ -1,5 +1,4 @@
-
-
+$('.popup__list').hide();
 //анимашка санты на главной
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 1){ 
@@ -47,20 +46,27 @@ $('.lucky-friday__img-down').click(function() {
 $('.region').click(function() {
 	
 	var region = $(this).data('region');
+
+	$('.lucky-friday').removeClass('blur-out');
+	$('.lucky-friday').addClass('blur-in');
+	$('body').css('overflow', 'hidden');
+	$('.popup__list[data-popup~=' + region + ']').fadeIn(500);
+
 	//выборка по соответствию data-region в map с data-date в slider
-	$('.date:not([data-date~=' + region + '])').removeClass('active');
-	$('.date[data-date~=' + region + ']').addClass('active');
+	// $('.date:not([data-date~=' + region + '])').removeClass('active');
+	// $('.date[data-date~=' + region + ']').addClass('active');
 
-	$('.marker:not([data-marker~=' + region + '])').removeClass('active');
-	$('.marker[data-marker~=' + region + ']').addClass('active');
+	// $('.marker:not([data-marker~=' + region + '])').removeClass('active');
+	// $('.marker[data-marker~=' + region + ']').addClass('active');
 
-	$('.marker-full_30').css('display', 'none');
-	$('.marker-full_14').css('display', 'none');
-	$('.region').removeClass('full');
-	$('.marker').css('display', 'block');
+	// $('.marker-full_30').css('display', 'none');
+	// $('.marker-full_14').css('display', 'none');
+	// $('.region').removeClass('full');
+	// $('.marker').css('display', 'block');
+	// $('.region').removeClass('active');
+	// $(this).addClass('active');
 
-	$('.region').removeClass('active');
-	$(this).addClass('active');
+	
 });
 
 //клик на календарь
@@ -68,33 +74,37 @@ $('.date').click(function(){
 	var date = $(this).data('date');
 
 	if (date == 14){
-		$('.region').addClass('full');
-		$('.marker').css('display', 'none');
-		$('.marker-full_30').css('display', 'none');
-		$('.marker-full_14').css('display', 'block');
-		$('.date').removeClass('active');
-		$(this).addClass('active');
+		// $('.region').addClass('full');
+		// $('.marker').css('display', 'none');
+		// $('.marker-full_30').css('display', 'none');
+		// $('.marker-full_14').css('display', 'block');
+		// $('.date').removeClass('active');
+		// $(this).addClass('active');
 	} else if (date == 30){
-		$('.region').addClass('full');
-		$('.marker').css('display', 'none');
-		$('.marker-full_14').css('display', 'none');
-		$('.marker-full_30').css('display', 'block');
-		$('.date').removeClass('active');
-		$(this).addClass('active');
+		// $('.region').addClass('full');
+		// $('.marker').css('display', 'none');
+		// $('.marker-full_14').css('display', 'none');
+		// $('.marker-full_30').css('display', 'block');
+		// $('.date').removeClass('active');
+		// $(this).addClass('active');
 	} else {
-		$('.region').removeClass('full');
-		$('.region:not([data-region~=' + date + '])').removeClass('active');
-		$('.region[data-region~=' + date + ']').addClass('active');
+		// $('.region').removeClass('full');
+		// $('.region:not([data-region~=' + date + '])').removeClass('active');
+		// $('.region[data-region~=' + date + ']').addClass('active');
 
-		$('.marker').css('display', 'block');
-		$('.marker:not([data-marker~=' + date + '])').removeClass('active');
-		$('.marker[data-marker~=' + date + ']').addClass('active');
-		$('.marker-full_30').css('display', 'none');
-		$('.marker-full_14').css('display', 'none');
+		// $('.marker').css('display', 'block');
+		// $('.marker:not([data-marker~=' + date + '])').removeClass('active');
+		// $('.marker[data-marker~=' + date + ']').addClass('active');
+		// $('.marker-full_30').css('display', 'none');
+		// $('.marker-full_14').css('display', 'none');
 
-		$('.marker').css('display', 'block');
-		$('.date').removeClass('active');
-		$(this).addClass('active');
+		// $('.marker').css('display', 'block');
+		// $('.date').removeClass('active');
+		// $(this).addClass('active');
+		$('.lucky-friday').removeClass('blur-out');
+		$('.lucky-friday').addClass('blur-in');
+		$('body').css('overflow', 'hidden');
+		$('.popup__list[data-popup~=' + date + ']').fadeIn(500);
 	}
 
 });
@@ -103,16 +113,38 @@ $('.date').click(function(){
 $('.marker').click(function(){
 	var marker = $(this).data('marker');
 	//выборка по соответствию data-marker в map с data-date в slider
-	$('.date:not([data-date~=' + marker + '])').removeClass('active');
-	$('.date[data-date~=' + marker + ']').addClass('active');
+	// $('.date:not([data-date~=' + marker + '])').removeClass('active');
+	// $('.date[data-date~=' + marker + ']').addClass('active');
 
-	$('.region:not([data-region~=' + marker + '])').removeClass('active');
-	$('.region[data-region~=' + marker + ']').addClass('active');
+	// $('.region:not([data-region~=' + marker + '])').removeClass('active');
+	// $('.region[data-region~=' + marker + ']').addClass('active');
 
-	$('.marker').removeClass('active');
-	$(this).addClass('active');
+	// $('.marker').removeClass('active');
+	// $(this).addClass('active');
+
+	$('.lucky-friday').removeClass('blur-out');
+	$('.lucky-friday').addClass('blur-in');
+	$('body').css('overflow', 'hidden');
+	$('.popup__list[data-popup~=' + marker + ']').fadeIn(500);
 });
 
+//клик на "Х" в popup
+$('.close').click(function () { 
+
+	$('.popup__list').fadeOut(500);
+	$('body').css('overflow', 'auto');
+	$('.lucky-friday').removeClass('blur-in');
+	$('.lucky-friday').addClass('blur-out');
+        
+});
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { 
+     	$('.popup__list').fadeOut(500);
+		$('body').css('overflow', 'auto');
+		$('.lucky-friday').removeClass('blur-in');
+		$('.lucky-friday').addClass('blur-out');
+    }
+});
 
 //проверка на дату
 
