@@ -252,6 +252,15 @@ button:hover
 		-o-filter: blur(0px);
 		-ms-filter: blur(0px);
 		filter: blur(0px);
+.close
+	position: absolute
+	right: 20px
+	top: 20px
+	z-index: 4
+	cursor: pointer
+.close:hover
+		path
+			fill: #EB1C24
 
 .popup
 	display: flex
@@ -266,15 +275,7 @@ button:hover
 	z-index: 2
 	background: rgba(255, 255, 255, 0.9)
 	overflow: scroll
-	.close
-		position: absolute
-		right: 20px
-		top: 20px
-		z-index: 4
-		cursor: pointer
-	.close:hover
-			path
-				fill: #EB1C24
+
 	.container
 		position: relative
 		display: flex
@@ -305,6 +306,139 @@ button:hover
 		width: 300px
 	.content__list:last-child
 		margin-right: 0
+
+.popup-form
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 2
+	background: rgba(255, 255, 255, 0.9)
+	overflow: scroll
+	.snowflake-1
+		position: absolute
+		top: 117px
+		left: 132px
+		
+	.snowflake-2
+		position: absolute
+		top: 117px
+		left: 494px
+	.snowflake-3
+		position: absolute
+		top: 47px
+		left: 896px
+	.snowflake-4
+		position: absolute
+		top: 120px
+		left: 1316px
+	.snowflake-5
+		position: absolute
+		top: 323px;
+		left: 1544px;
+	.snowflake-6
+		position: absolute
+		top: 383px
+		left: 348px
+	.snowflake-7
+		position: absolute
+		top: 324px
+		right: 1575px
+	.snowflake-8
+		position: absolute
+		top: 620px
+		left: 168px
+	.snowflake-9
+		position: absolute
+		top: 561px
+		left: 1392px
+	.snowflake-10
+		position: absolute
+		top: 692px
+		right: 1823px
+	.container
+		display: flex
+		align-items: flex-start
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		width: 628px
+		min-width: 628px  
+	.title
+		text-align: left
+	.lucky-friday__img-santa
+		position: absolute
+		bottom: 0
+		left: 80px
+	.text
+		width: 580px
+		text-align: left
+		line-height: 28px
+	.form__item
+		padding-left: 32px
+		position: relative;
+		font-size: 24px
+		line-height: 28px;
+		cursor: pointer;
+		margin-bottom: 20px
+		
+	.checkbox
+		display: inline-block;
+	.yes-checkbox
+		position: absolute;
+		left: 0px;
+		top: 1px;
+		width: 24px;
+		height: 24px;
+		content: "";
+		margin-right: 5px;
+		background-image: url(/img/lucky_friday/check.png);
+		border: none;
+		vertical-align: middle;
+		z-index: 6
+	.not-checkbox
+		position: absolute;
+		left: 0px;
+		top: 1px;  
+		content: "";
+		width: 24px;
+		height: 24px;
+		border: 2px solid #E0E0E0;
+		box-sizing: border-box;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		background-color: #ffffff;
+		background-image: none;
+		margin-right: 5px;  
+		vertical-align: middle;
+	.not-checkbox:hover
+		border: 2px solid #EB1C24;
+
+
+	.search
+		margin: 15px 0 6px 28px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		width: 169px;
+		
+
+	.search input
+		width: 140px;
+		font-family: Pt Sans;
+		font-size: 16px;
+		line-height: 21px;
+		color: rgba(0, 0, 0, 0.4);
+		border: none;
+		outline: none;
+		margin-bottom: 5px;
+
+	.search input[type="search"]::-webkit-search-cancel-button
+		display: none;
+
 		 
 .header
 	color: #ffffff

@@ -213,6 +213,16 @@ button:hover {
     -ms-filter: blur(0px);
     filter: blur(0px); } }
 
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
+  cursor: pointer; }
+
+.close:hover path {
+  fill: #EB1C24; }
+
 .popup {
   display: -webkit-box;
   display: -webkit-flex;
@@ -239,14 +249,6 @@ button:hover {
   z-index: 2;
   background: rgba(255, 255, 255, 0.9);
   overflow: scroll; }
-  .popup .close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 4;
-    cursor: pointer; }
-  .popup .close:hover path {
-    fill: #EB1C24; }
   .popup .container {
     position: relative;
     display: -webkit-box;
@@ -295,6 +297,153 @@ button:hover {
 
 .popup:nth-child(7) .content__list:last-child {
   margin-right: 0; }
+
+.popup-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: scroll; }
+  .popup-form .snowflake-1 {
+    position: absolute;
+    top: 117px;
+    left: 132px; }
+  .popup-form .snowflake-2 {
+    position: absolute;
+    top: 117px;
+    left: 494px; }
+  .popup-form .snowflake-3 {
+    position: absolute;
+    top: 47px;
+    left: 896px; }
+  .popup-form .snowflake-4 {
+    position: absolute;
+    top: 120px;
+    left: 1316px; }
+  .popup-form .snowflake-5 {
+    position: absolute;
+    top: 323px;
+    left: 1544px; }
+  .popup-form .snowflake-6 {
+    position: absolute;
+    top: 383px;
+    left: 348px; }
+  .popup-form .snowflake-7 {
+    position: absolute;
+    top: 324px;
+    right: 1575px; }
+  .popup-form .snowflake-8 {
+    position: absolute;
+    top: 620px;
+    left: 168px; }
+  .popup-form .snowflake-9 {
+    position: absolute;
+    top: 561px;
+    left: 1392px; }
+  .popup-form .snowflake-10 {
+    position: absolute;
+    top: 692px;
+    right: 1823px; }
+  .popup-form .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 628px;
+    min-width: 628px; }
+  .popup-form .title {
+    text-align: left; }
+  .popup-form .lucky-friday__img-santa {
+    position: absolute;
+    bottom: 0;
+    left: 80px; }
+  .popup-form .text {
+    width: 580px;
+    text-align: left;
+    line-height: 28px; }
+  .popup-form .form__item {
+    padding-left: 32px;
+    position: relative;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+    margin-bottom: 20px; }
+  .popup-form .checkbox {
+    display: inline-block; }
+  .popup-form .yes-checkbox {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    margin-right: 5px;
+    background-image: url(/img/lucky_friday/check.png);
+    border: none;
+    vertical-align: middle;
+    z-index: 6; }
+  .popup-form .not-checkbox {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 2px solid #E0E0E0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: none;
+    margin-right: 5px;
+    vertical-align: middle; }
+  .popup-form .not-checkbox:hover {
+    border: 2px solid #EB1C24; }
+  .popup-form .search {
+    margin: 15px 0 6px 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 169px; }
+  .popup-form .search input {
+    width: 140px;
+    font-family: Pt Sans;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
+    margin-bottom: 5px; }
+  .popup-form .search input[type="search"]::-webkit-search-cancel-button {
+    display: none; }
 
 .header {
   color: #ffffff;

@@ -28,235 +28,283 @@
     </script>
 
     <div class="popups">
-
-        <div class="popup popup__list" data-popup="1">
+        <div class="popup-form">
+            
             <div class="container">
-                <div class="title">1 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 1 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                <div class="snowflakes">
+                    <div class="snowflake-1 animate-1"><img src="img/lucky_friday/snowflake-red_big.png"></div>
+                    <div class="snowflake-2 animate-2"><img src="img/lucky_friday/snowflake-red_little.png"></div>
+                    <div class="snowflake-3 animate-4"><img src="img/lucky_friday/snowflake-red_medium.png"></div>
+                    <div class="snowflake-4 animate-3"><img src="img/lucky_friday/snowflake-red_little.png"></div>
+                    <div class="snowflake-5 animate-5"><img src="img/lucky_friday/snowflake-red_big.png"></div>
+                    <div class="snowflake-6 animate-3"><img src="img/lucky_friday/snowflake-red_medium.png"></div>
+                    <div class="snowflake-7 animate-2"><img src="img/lucky_friday/snowflake-red_medium.png"></div>
+                    <div class="snowflake-8 animate-1"><img src="img/lucky_friday/snowflake-red_little.png"></div>
+                    <div class="snowflake-9 animate-4"><img src="img/lucky_friday/snowflake-red_little.png"></div>
+                    <div class="snowflake-10 animate-5"><img src="img/lucky_friday/snowflake-red_little.png"></div>
                 </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Амурская область</li>
-                        <li>Еврейская автономная область</li>
-                        <li>Забайкальский край</li>
-                        <li>Камчатский край</li>
-                        <li>Магаданская область</li>
-                        <li>Приморский край</li>
-                        <li>Сахалинская область</li>
-                        <li>Хабароский край</li>
-                        <li>Чукотский актономный округ</li>
-                        <li>Якутия</li>
-                    </ul>
-                </div> 
+                <div class="title">
+                    Напомнить вам<br>
+                    о Везучей пятнице?
+                </div>
+                <div class="text">
+                    Подпишитесь на нашу рассылку, чтобы вовремя узнавать об акциях и скидках «Читай-города». Выберите, про которую вам напомнить:
+                </div>
+                <div class="form">
+                    <div class="form__item" data-form="november">
+                        <div class="checkbox not-checkbox" ></div>
+                        30 ноября для держателей КЛП
+                    </div>
+                    <div class="form__item" data-form="myDay">
+                        <div class="checkbox not-checkbox" ></div>
+                        Везучая пятница в моём регионе
+                    </div>
+                    <div class="form__item" data-form="december">
+                        <div class="checkbox not-checkbox" ></div>
+                        Везучая пятница по всей России 14 декабря
+                    </div>
+                </div>
+
+                <input type="text" id='input-search'/>
+                    <button>Подписаться</button>
+                <p class="checkbox-message message">Заполните это поле</p>
             </div>
+            <img class="lucky-friday__img-santa" src="img/lucky_friday/big_red_santa.png">
             <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
                 <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
             </svg> 
         </div>
-        <div class="popup popup__list" data-popup="2">
-            <div class="container">
-                <div class="title">2 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 2 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+
+        <div class="popup-list">
+            <div class="popup" data-popup="1">
+                <div class="container">
+                    <div class="title">1 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 1 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Амурская область</li>
+                            <li>Еврейская автономная область</li>
+                            <li>Забайкальский край</li>
+                            <li>Камчатский край</li>
+                            <li>Магаданская область</li>
+                            <li>Приморский край</li>
+                            <li>Сахалинская область</li>
+                            <li>Хабароский край</li>
+                            <li>Чукотский актономный округ</li>
+                            <li>Якутия</li>
+                        </ul>
+                    </div> 
                 </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Бурятия</li>
-                        <li>Якутская область</li>
-                    </ul>
-                </div>  
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg>
-        </div>
-        <div class="popup popup__list" data-popup="3">
-            <div class="container">
-                <div class="title">3 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 3 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Алтайский край</li>
-                        <li>Кемеровская область</li>
-                        <li>Красноярский край</li>
-                        <li>Новосибирская область</li>
-                        <li>Республика Алтай</li>
-                        <li>Томская область</li>
-                        <li>Тыва</li>
-                        <li>Хакасия</li>
-                    </ul>
-                </div>  
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg>
-        </div>
-
-        <div class="popup popup__list" data-popup="4">
-            <div class="container">
-                <div class="title">4 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 4 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Омская область</li>
-                    </ul>
-                </div>  
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg>
-        </div>
-
-        <div class="popup popup__list" data-popup="5">
-            <div class="container">
-                <div class="title">5 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 5 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Башкортостан</li>
-                        <li>Курганская область</li>
-                        <li>Оренбургская область</li>
-                        <li>Пермский край</li>
-                        <li>Свердловская область</li>
-                        <li>Ханты-Мансийский автономный округ — Югра</li>
-                        <li>Челябинская область</li>
-                        <li>Ямало-Ненецкий автономный округ</li>
-                    </ul>
-                </div>  
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg>
-        </div>
-
-        <div class="popup popup__list" data-popup="6">
-            <div class="container">
-                <div class="title">6 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 6 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Астраханская область </li>
-                        <li>Самарская область</li>
-                        <li>Саратовская область</li>
-                        <li>Удмуртия</li>
-                        <li>Ульяновская область</li>
-                    </ul>
-                </div>  
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg>
-        </div>
-
-        <div class="popup popup__list" data-popup="7">
-            <div class="container">
-                <div class="title">7 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 7 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Адыгея</li>
-                        <li>Архангельская область</li>
-                        <li>(включая архипелаг Новая Земля)</li>
-                        <li>Белгородская область</li>
-                        <li>Брянская область</li>
-                        <li>Владимирская область</li>
-                        <li>Волгоградская область</li>
-                        <li>Вологодская область</li>
-                        <li>Воронежская область</li>
-                        <li>Дагестан</li>
-                        <li>Ивановская область</li>
-                        <li>Ингушетия</li>
-                        <li>Кабардино-Балкария</li>          
-                    </ul>
-
-                    <ul class="content__list">
-                        <li>Калмыкия</li>
-                        <li>Калужская область</li>
-                        <li>Карачаево-Черкесия</li>
-                        <li>Карелия</li>
-                        <li>Кировская область</li>
-                        <li>Костромская область</li>
-                        <li>Краснодарский край</li>
-                        <li>Курская область</li>
-                        <li>Ленинградская область</li>
-                        <li>Липецкая область</li>
-                        <li>Марий Эл</li>
-                        <li>Мордовия</li>         
-                    </ul>
-
-                    <ul class="content__list">
-                        <li>Москва</li>
-                        <li>Московская область</li>
-                        <li>Мурманская область</li>
-                        <li>Ненецкий автономный округ</li>
-                        <li>Нижегородская область</li>
-                        <li>Новгородская область</li>
-                        <li>Орловская область</li>
-                        <li>Пензенская область</li>
-                        <li>Псковская область</li>
-                        <li>Республика Коми</li>
-                        <li>Республика Крым</li>
-                        <li>Ростовская область</li>         
-                    </ul>
-
-                    <ul class="content__list">
-                        <li>Рязанская область</li>
-                        <li>Санкт-Петербург</li>
-                        <li>Севастополь</li>
-                        <li>Северная Осетия</li>
-                        <li>Смоленская область</li>
-                        <li>Ставропольский край</li>
-                        <li>Тамбовская область</li>
-                        <li>Татарстан</li>
-                        <li>Тверская область</li>
-                        <li>Тульская область</li>
-                        <li>Чечня</li>
-                        <li>Чувашия</li>
-                        <li>Ярославская область</li>         
-                    </ul>
-                </div> 
-            </div>
-            <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-            </svg> 
-        </div>
-   
-
-        <div class="popup popup__list" data-popup="8">
-            <div class="container">
-                <div class="title">8 декабря</div>
-                <div class="text text_accent">
-                    Везучая пятница пройдет 8 декабря
-                    <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
-                </div>
-                <div class="content">
-                    <ul class="content__list">
-                        <li>Калининградская область </li>
-                    </ul>
-                </div>  
-            </div>
                 <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg> 
             </div>
-        <div>
+            <div class="popup" data-popup="2">
+                <div class="container">
+                    <div class="title">2 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 2 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Бурятия</li>
+                            <li>Якутская область</li>
+                        </ul>
+                    </div>  
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
+            </div>
+            <div class="popup" data-popup="3">
+                <div class="container">
+                    <div class="title">3 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 3 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Алтайский край</li>
+                            <li>Кемеровская область</li>
+                            <li>Красноярский край</li>
+                            <li>Новосибирская область</li>
+                            <li>Республика Алтай</li>
+                            <li>Томская область</li>
+                            <li>Тыва</li>
+                            <li>Хакасия</li>
+                        </ul>
+                    </div>  
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
+            </div>
+
+            <div class="popup" data-popup="4">
+                <div class="container">
+                    <div class="title">4 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 4 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Омская область</li>
+                        </ul>
+                    </div>  
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
+            </div>
+
+            <div class="popup" data-popup="5">
+                <div class="container">
+                    <div class="title">5 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 5 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Башкортостан</li>
+                            <li>Курганская область</li>
+                            <li>Оренбургская область</li>
+                            <li>Пермский край</li>
+                            <li>Свердловская область</li>
+                            <li>Ханты-Мансийский автономный округ — Югра</li>
+                            <li>Челябинская область</li>
+                            <li>Ямало-Ненецкий автономный округ</li>
+                        </ul>
+                    </div>  
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
+            </div>
+
+            <div class="popup" data-popup="6">
+                <div class="container">
+                    <div class="title">6 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 6 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Астраханская область </li>
+                            <li>Самарская область</li>
+                            <li>Саратовская область</li>
+                            <li>Удмуртия</li>
+                            <li>Ульяновская область</li>
+                        </ul>
+                    </div>  
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
+            </div>
+
+            <div class="popup" data-popup="7">
+                <div class="container">
+                    <div class="title">7 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 7 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Адыгея</li>
+                            <li>Архангельская область</li>
+                            <li>(включая архипелаг Новая Земля)</li>
+                            <li>Белгородская область</li>
+                            <li>Брянская область</li>
+                            <li>Владимирская область</li>
+                            <li>Волгоградская область</li>
+                            <li>Вологодская область</li>
+                            <li>Воронежская область</li>
+                            <li>Дагестан</li>
+                            <li>Ивановская область</li>
+                            <li>Ингушетия</li>
+                            <li>Кабардино-Балкария</li>          
+                        </ul>
+
+                        <ul class="content__list">
+                            <li>Калмыкия</li>
+                            <li>Калужская область</li>
+                            <li>Карачаево-Черкесия</li>
+                            <li>Карелия</li>
+                            <li>Кировская область</li>
+                            <li>Костромская область</li>
+                            <li>Краснодарский край</li>
+                            <li>Курская область</li>
+                            <li>Ленинградская область</li>
+                            <li>Липецкая область</li>
+                            <li>Марий Эл</li>
+                            <li>Мордовия</li>         
+                        </ul>
+
+                        <ul class="content__list">
+                            <li>Москва</li>
+                            <li>Московская область</li>
+                            <li>Мурманская область</li>
+                            <li>Ненецкий автономный округ</li>
+                            <li>Нижегородская область</li>
+                            <li>Новгородская область</li>
+                            <li>Орловская область</li>
+                            <li>Пензенская область</li>
+                            <li>Псковская область</li>
+                            <li>Республика Коми</li>
+                            <li>Республика Крым</li>
+                            <li>Ростовская область</li>         
+                        </ul>
+
+                        <ul class="content__list">
+                            <li>Рязанская область</li>
+                            <li>Санкт-Петербург</li>
+                            <li>Севастополь</li>
+                            <li>Северная Осетия</li>
+                            <li>Смоленская область</li>
+                            <li>Ставропольский край</li>
+                            <li>Тамбовская область</li>
+                            <li>Татарстан</li>
+                            <li>Тверская область</li>
+                            <li>Тульская область</li>
+                            <li>Чечня</li>
+                            <li>Чувашия</li>
+                            <li>Ярославская область</li>         
+                        </ul>
+                    </div> 
+                </div>
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg> 
+            </div>
+       
+
+            <div class="popup" data-popup="8">
+                <div class="container">
+                    <div class="title">8 декабря</div>
+                    <div class="text text_accent">
+                        Везучая пятница пройдет 8 декабря
+                        <br>с 00:00 до 23:59 по московскому времени в следующих регионах:
+                    </div>
+                    <div class="content">
+                        <ul class="content__list">
+                            <li>Калининградская область </li>
+                        </ul>
+                    </div>  
+                </div>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+            </div>
+        </div>
+    </div>
 
     <div class="lucky-friday blur-out">
         
@@ -331,19 +379,20 @@
                 <p class="title">Везучая пятница<br>в интернет-магазине</p>
                 
                 <p class="text">В этом году в каждом регионе будет своя Везучая пятница.</p>
-
                 <p class="text">Ваш город - <a class="link">Петропавловск-Камчатский</a></p>
+                    
+                <div class="text__changeable">
+                    <p class="text text_accent">В вашем городе Везучая пятница будет проходить <span class="text_color"> 2 декабря</span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
 
-                <p class="text text_accent">В вашем городе Везучая пятница будет проходить <span class="text_color"> 2 декабря</span>
-                    <br>
-                    с 00:00 до 23:59 по московскому времени
-                </p>
-
-                <p class="text">
-                    30 ноября акция действует для держателей Карты Любимого Покупателя,
-                    <br>
-                    а 14 декабря - для всех
-                </p>
+                    <p class="text">
+                        30 ноября акция действует для держателей Карты Любимого Покупателя,
+                        <br>
+                        а 14 декабря - для всех
+                    </p>
+                </div>
 
                 <div class="calendar">
                     <div class="date" data-date="30">

@@ -1,4 +1,5 @@
-$('.popup__list').hide();
+$('.popup-list .popup').hide();
+$('.popup-form').hide();
 //анимашка санты на главной
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 1){ 
@@ -50,7 +51,7 @@ $('.region').click(function() {
 	$('.lucky-friday').removeClass('blur-out');
 	$('.lucky-friday').addClass('blur-in');
 	$('body').css('overflow', 'hidden');
-	$('.popup__list[data-popup~=' + region + ']').fadeIn(500);
+	$('.popup-list .popup[data-popup~=' + region + ']').fadeIn(500);
 
 	//выборка по соответствию data-region в map с data-date в slider
 	// $('.date:not([data-date~=' + region + '])').removeClass('active');
@@ -104,7 +105,7 @@ $('.date').click(function(){
 		$('.lucky-friday').removeClass('blur-out');
 		$('.lucky-friday').addClass('blur-in');
 		$('body').css('overflow', 'hidden');
-		$('.popup__list[data-popup~=' + date + ']').fadeIn(500);
+		$('.popup-list .popup[data-popup~=' + date + ']').fadeIn(500);
 	}
 
 });
@@ -125,21 +126,47 @@ $('.marker').click(function(){
 	$('.lucky-friday').removeClass('blur-out');
 	$('.lucky-friday').addClass('blur-in');
 	$('body').css('overflow', 'hidden');
-	$('.popup__list[data-popup~=' + marker + ']').fadeIn(500);
+	$('.popup-list .popup[data-popup~=' + marker + ']').fadeIn(500);
+});
+
+
+//клик на "Напомнить"
+$('.btn').click(function(){
+	$('.lucky-friday').removeClass('blur-out');
+	$('.lucky-friday').addClass('blur-in');
+	$('body').css('overflow', 'hidden');
+	$('.popup-form').fadeIn(500);
+});
+
+//клик на чекбокс
+$('.form__item').click(function(){
+	if ($(this).attr('my')) {
+		$(this).find('ckeckbox').toggleClass('not-checkbox');
+		$(this).find('ckeckbox').toggleClass('yes-checkbox');
+	} else if ($(this).attr('november')){
+		$('checkbox').attr('november').toggleClass('not-checkbox');
+		$('checkbox').attr('november').toggleClass('yes-checkbox');
+	} else {
+		$('checkbox').toggleClass('not-checkbox');
+		$('checkbox').toggleClass('yes-checkbox');
+	}
 });
 
 //клик на "Х" в popup
 $('.close').click(function () { 
 
-	$('.popup__list').fadeOut(500);
+	$('.popup-list .popup').fadeOut(500);
+	$('.popup-form').fadeOut(500);
 	$('body').css('overflow', 'auto');
 	$('.lucky-friday').removeClass('blur-in');
 	$('.lucky-friday').addClass('blur-out');
         
 });
+
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { 
-     	$('.popup__list').fadeOut(500);
+     	$('.popup-list .popup').fadeOut(500);
+     	$('.popup-form').fadeOut(500);
 		$('body').css('overflow', 'auto');
 		$('.lucky-friday').removeClass('blur-in');
 		$('.lucky-friday').addClass('blur-out');
