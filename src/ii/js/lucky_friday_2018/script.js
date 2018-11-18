@@ -162,7 +162,7 @@ $('.btn__subscribe').click(function(){
 });
 
 //клик на "Х" в popup
-$('.close').click(function () { 
+$('.close, .content__change .link').click(function () { 
 	$('.img_santa').removeClass("right");
 	$('.img_santa').addClass("none");
 	$('.popup-list .popup').addClass('hidden');
@@ -187,41 +187,81 @@ $(document).keyup(function(e) {
 
 //проверка на дату
 
-var day_a = "2018-11-19T00:00:00", // дата в формате день.месяц.год (начало дня)
-	today = new Date()
+var dayBegin = "2018-11-16T00:00:00", // дата в формате день.месяц.год (начало дня)
+	today = new Date(),
+	dayKlp = "2018-11-30T00:00:00",
+	dayKlpEnd = "2018-11-30T23:59:59",
+	dayX = "2018-12-14T00:00:00",
+	dayXEnd = "2018-12-14T23:59:59"
+
 	
 //двух строчек ниже можно избежать если сразу присылать дату в формате месяц/день/год
-// day_a = day_a.split('.');
-// day_a = day_a[1]+'/'+day_a[0]+'/'+day_a[2] ;
+// dayBegin = dayBegin.split('.');
+// dayBegin = dayBegin[1]+'/'+dayBegin[0]+'/'+dayBegin[2] ;
 
-day_a = new Date(Date.parse(day_a));
-day_a.setDate(day_a.getDate());
+dayBegin = new Date(Date.parse(dayBegin));
+dayBegin.setDate(dayBegin.getDate());
 
-var day_b; //(конец дня)
-day_b = new Date(Date.parse(day_a));
-day_b.setHours(day_a.getHours() + 23);
-day_b.setMinutes(day_a.getMinutes() + 59);
+var dayEnd; //(конец дня)i=
+dayEnd = new Date(Date.parse(dayBegin));
+dayEnd.setHours(dayBegin.getHours() + 23);
+dayEnd.setMinutes(dayBegin.getMinutes() + 59);
 
-console.log('начало дня: ' + day_a);
-console.log('конец дня: ' + day_b);
+dayKlp = new Date(Date.parse(dayKlp));
+dayKlp.setDate(dayKlp.getDate());
+
+dayKlpEnd = new Date(Date.parse(dayKlpEnd));
+dayKlpEnd.setDate(dayKlpEnd.getDate());
+
+dayX = new Date(Date.parse(dayX));
+dayX.setDate(dayX.getDate());
+
+dayXEnd = new Date(Date.parse(dayXEnd));
+dayXEnd.setDate(dayXEnd.getDate());
+
+console.log('начало дня: ' + dayBegin);
+console.log('конец дня: ' + dayEnd);
 console.log('cегодня: ' + today);
 
 
-var btn = document.getElementsByClassName('btn'),
-	btnGo = document.getElementsByClassName('btn__go');
-	console.log(btnGo);
-	console.log(btn);
-
-if (today.getTime() >= day_a.getTime() && today.getTime() <= day_b.getTime()) {
+if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()) {
  //показываем контент 
 	console.log('сегодня в нужном периоде');
+	$('.text__changeable').addClass('hidden');
+	$('.text__changeable_day').removeClass('hidden');
+	$('.btn').css('display', 'none');
+	$('.btn_go').css('display', 'block');
 
-	btn[0].style.display =  "none";
-	btnGo[0].style.display =  "block";
+}else if (today.getTime() >= dayKlp.getTime() && today.getTime() <= dayKlpEnd.getTime()){
+	console.log('сегодняшняя дата 30 ноября');
+	$('.region').addClass('full');
+	$('.marker').css('display', 'none');
+	$('.marker-full_14').css('display', 'none');
+	$('.marker-full_30').css('display', 'block');
+	$('.text__changeable').addClass('hidden');
+	$('.text__changeable_klp').removeClass('hidden');
+	$('.btn').css('display', 'none');
+	$('.btn_go').css('display', 'block');
 
-} else if (today.getTime() > day_b.getTime()){
+
+}else if (today.getTime() >= dayX.getTime() && today.getTime() <= dayXEnd.getTime()){
+	console.log('сегодняшняя дата 14');
+	$('.region').addClass('full');
+	$('.marker').css('display', 'none');
+	$('.marker-full_14').css('display', 'block');
+	$('.marker-full_30').css('display', 'none');
+	$('.calendar').css('display', 'none');
+	$('.text__changeable').addClass('hidden');
+	$('.text__changeable_day-x').removeClass('hidden').css('margin-bottom', '60px');
+	$('.btn').css('display', 'none');
+	$('.btn_go').css('display', 'block');
+
+
+}else if (today.getTime() > dayEnd.getTime()){
  //скрываем контент 
 	console.log('сегодняшняя дата больше указанного периода');
+	$('.text__changeable').addClass('hidden');
+	$('.text__changeable_after-day').removeClass('hidden');
 
 } else {
 	console.log('сегодняшняя дата меньше указанного периода');
