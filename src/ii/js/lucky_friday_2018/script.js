@@ -236,8 +236,8 @@ if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()
 	console.log('сегодняшняя дата 30 ноября');
 	$('.region').addClass('full');
 	$('.marker').css('display', 'none');
-	$('.marker-full_14').css('display', 'none');
-	$('.marker-full_30').css('display', 'block');
+	$('.marker-full_14').addClass('hidden');
+	$('.marker-full_30').removeClass('hidden');
 	$('.text__changeable').addClass('hidden');
 	$('.text__changeable_klp').removeClass('hidden');
 	$('.btn').css('display', 'none');
@@ -248,8 +248,8 @@ if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()
 	console.log('сегодняшняя дата 14');
 	$('.region').addClass('full');
 	$('.marker').css('display', 'none');
-	$('.marker-full_14').css('display', 'block');
-	$('.marker-full_30').css('display', 'none');
+	$('.marker-full_14').removeClass('hidden');
+	$('.marker-full_30').addClass('hidden');
 	$('.calendar').css('display', 'none');
 	$('.text__changeable').addClass('hidden');
 	$('.text__changeable_day-x').removeClass('hidden').css('margin-bottom', '60px');

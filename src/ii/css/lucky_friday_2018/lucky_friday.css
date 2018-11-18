@@ -791,11 +791,9 @@
       #lf .luckyFriday-map .marker.active path {
         fill-opacity: 1; }
     #lf .luckyFriday-map .marker-full_30 {
-      cursor: pointer;
-      display: none; }
+      cursor: pointer; }
     #lf .luckyFriday-map .marker-full_14 {
-      cursor: pointer;
-      display: none; }
+      cursor: pointer; }
   #lf .luckyFriday-klp .container {
     position: relative;
     margin-top: 190px;
