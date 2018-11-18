@@ -16,7 +16,7 @@
         <script src="https://vk.com/js/api/openapi.js?144"></script>
 
     </head>
-<body>
+<body id="lf">
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M569KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <script type="text/javascript">(function (d, w, c) {(w[c] = w[c] || []).push(function() {try {w.yaCounter6936841 = new Ya.Metrika({id:6936841,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,ecommerce:"dataLayer"});} catch(e) { }});var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),f = function () { n.parentNode.insertBefore(s, n); };s.type = "text/javascript";s.async = true;s.src = "https://mc.yandex.ru/metrika/watch.js";if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); }})(document, window, "yandex_metrika_callbacks");</script>
@@ -28,7 +28,7 @@
     </script>
 
     <div class="popups">
-        <div class="popup-form">
+        <div class="popup-form hidden">
             
             <div class="container">
                 <div class="snowflakes">
@@ -43,40 +43,62 @@
                     <div class="snowflake-9 animate-4"><img src="/ii/img/lucky_friday_2018/snowflake-red_little.png"></div>
                     <div class="snowflake-10 animate-5"><img src="/ii/img/lucky_friday_2018/snowflake-red_little.png"></div>
                 </div>
-                <div class="title">
-                    Напомнить вам<br>
-                    о Везучей пятнице?
-                </div>
-                <div class="text">
+                <div class="content">
+                    <div class="title">
+                        Напомнить вам<br>
+                        о Везучей пятнице?
+                    </div>
+                    <div class="text">
                     Подпишитесь на нашу рассылку, чтобы вовремя узнавать об акциях и скидках «Читай-города». Выберите, про которую вам напомнить:
-                </div>
-                <div class="form">
-                    <div class="form__item" data-form="november">
-                        <div class="checkbox not-checkbox" ></div>
-                        30 ноября для держателей КЛП
-                    </div>
-                    <div class="form__item" data-form="myDay">
-                        <div class="checkbox not-checkbox" ></div>
-                        Везучая пятница в моём регионе
-                    </div>
-                    <div class="form__item" data-form="december">
-                        <div class="checkbox not-checkbox" ></div>
-                        Везучая пятница по всей России 14 декабря
                     </div>
                 </div>
+                <div class="content__change hidden">
+                    <div class="title">
+                        Можете спать<br>
+                        спокойно
+                    </div>
+                    <div class="text">
+                    Мы вам напомним о Везучей пятнице. <br>
+                    А пока - собирайте корзину.<br><br>
+                    <a href="#"class="link">На главную</a>
+                    </div>
+                </div>
+                <form class="form" action="">
 
-                <input type="text" id='input-search'/>
-                    <button>Подписаться</button>
-                <p class="checkbox-message message">Заполните это поле</p>
+                    <div class="form__item">
+                        <input type="checkbox" name="checkbox-november" id="checkbox-november" datacheck="check"/>
+                        <label for="checkbox-november">
+                        30 ноября для держателей КЛП </label>
+                    </div>
+                    <div class="form__item">
+                        <input type="checkbox" name="checkbox-november" id="checkbox-myday" datacheck="check"/>
+                        <label for="checkbox-myday">
+                        Везучая пятница в моём регионе</label>
+                    </div>
+                    <div class="form__item">
+                        <input type="checkbox" name="checkbox-november" id="checkbox-december" datacheck="check"/>
+                        <label for="checkbox-december">
+                        Везучая пятница по всей России 14 декабря</label>
+                    </div>
+                       
+                    <div class="form__subscribe">
+                        <div class="email">
+                            <input type="email" placeholder="Ваш email" id='input-email'/>
+                        </div>
+                        <button class="btn__subscribe"> Подписаться </button>
+                    </div>
+                    
+                    <div class="form__message hidden">Поле обязательно для заполнения</div>
+                </form>
             </div>
-            <img class="lucky-friday__img-santa" src="/ii/img/lucky_friday_2018/big_red_santa.png">
+            <img class="img_santa" src="/ii/img/lucky_friday_2018/big_red_santa.png">
             <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
                 <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
             </svg> 
         </div>
 
         <div class="popup-list">
-            <div class="popup" data-popup="1">
+            <div class="popup hidden" data-popup="1">
                 <div class="container">
                     <div class="title">1 декабря</div>
                     <div class="text text_accent">
@@ -102,7 +124,7 @@
                     <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
                 </svg> 
             </div>
-            <div class="popup" data-popup="2">
+            <div class="popup hidden" data-popup="2">
                 <div class="container">
                     <div class="title">2 декабря</div>
                     <div class="text text_accent">
@@ -120,7 +142,7 @@
                     <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
                 </svg>
             </div>
-            <div class="popup" data-popup="3">
+            <div class="popup hidden" data-popup="3">
                 <div class="container">
                     <div class="title">3 декабря</div>
                     <div class="text text_accent">
@@ -145,7 +167,7 @@
                 </svg>
             </div>
 
-            <div class="popup" data-popup="4">
+            <div class="popup hidden" data-popup="4">
                 <div class="container">
                     <div class="title">4 декабря</div>
                     <div class="text text_accent">
@@ -163,7 +185,7 @@
                 </svg>
             </div>
 
-            <div class="popup" data-popup="5">
+            <div class="popup hidden" data-popup="5">
                 <div class="container">
                     <div class="title">5 декабря</div>
                     <div class="text text_accent">
@@ -188,7 +210,7 @@
                 </svg>
             </div>
 
-            <div class="popup" data-popup="6">
+            <div class="popup hidden" data-popup="6">
                 <div class="container">
                     <div class="title">6 декабря</div>
                     <div class="text text_accent">
@@ -210,7 +232,7 @@
                 </svg>
             </div>
 
-            <div class="popup" data-popup="7">
+            <div class="popup hidden" data-popup="7">
                 <div class="container">
                     <div class="title">7 декабря</div>
                     <div class="text text_accent">
@@ -280,14 +302,15 @@
                             <li>Ярославская область</li>         
                         </ul>
                     </div> 
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                        <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                    </svg> 
                 </div>
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
-                    <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
-                </svg> 
+                
             </div>
        
 
-            <div class="popup" data-popup="8">
+            <div class="popup hidden" data-popup="8">
                 <div class="container">
                     <div class="title">8 декабря</div>
                     <div class="text text_accent">
@@ -300,16 +323,17 @@
                         </ul>
                     </div>  
                 </div>
-                    <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
+                <svg class="close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" width="48" height="48">
                     <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
+                </svg>
             </div>
         </div>
     </div>
 
-    <div class="lucky-friday blur-out">
+    <div class="luckyFriday blur-out">
         
         
-        <div id="home" class="lucky-friday__first bg">
+        <div id="home" class="luckyFriday-first bg">
             <div class="header">
                 <a href="https://www.chitai-gorod.ru/" class="header__logo"><img src="/ii/img/lucky_friday_2018/logo.png"></a>
                 <nav class="menu">
@@ -346,43 +370,27 @@
                         <div class="snowflake-21 animate-2"><img src="/ii/img/lucky_friday_2018/snowflake_little.png"></div>
                     </div>
                     <div class="title">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 825 277" width="825" height="277">
-                            <path fill="white" d="M 98.874 2.44799 C 109.146 2.44799 117.066 4.752 122.634 9.36 C 128.202 13.968 130.986 20.256 130.986 28.224 C 130.986 33.024 129.93 37.008 127.818 40.176 C 125.802 43.248 122.634 45.984 118.314 48.384 C 124.17 50.304 128.586 53.472 131.562 57.888 C 134.634 62.304 136.17 67.68 136.17 74.016 C 136.17 83.616 132.618 91.248 125.514 96.912 C 118.41 102.48 110.058 105.264 100.458 105.264 H 41.85 V 2.44799 H 98.874 Z M 90.8101 42.48 C 94.3621 42.48 96.9541 41.856 98.5861 40.608 C 100.218 39.264 101.034 37.056 101.034 33.984 C 101.034 29.28 97.578 26.928 90.666 26.928 H 73.53 V 42.48 H 90.8101 Z M 92.538 80.784 C 100.506 80.784 104.49 77.52 104.49 70.992 C 104.49 67.92 103.53 65.616 101.61 64.08 C 99.69 62.448 97.098 61.632 93.834 61.632 H 73.53 V 80.784 H 92.538 Z" />
-                            <path fill="white" d="M 240.888 2.44799 V 28.8 H 187.464 V 41.616 H 235.992 V 66.096 H 187.464 V 78.912 H 242.472 V 105.264 H 155.784 V 2.44799 H 240.888 Z" />
-                            <path fill="white" d="M 305.847 0 C 318.711 0 328.791 2.496 336.087 7.488 C 343.383 12.48 347.031 19.488 347.031 28.512 C 347.031 33.216 345.639 37.488 342.855 41.328 C 340.167 45.072 336.519 47.856 331.911 49.68 C 337.959 51.408 342.519 54.288 345.591 58.32 C 348.663 62.352 350.199 67.2 350.199 72.864 C 350.199 83.712 346.119 92.256 337.959 98.496 C 329.895 104.64 318.807 107.712 304.695 107.712 C 290.295 107.712 278.967 104.4 270.711 97.776 C 262.551 91.152 258.375 82.128 258.183 70.704 H 289.719 C 290.295 79.344 295.095 83.664 304.119 83.664 C 309.015 83.664 312.759 82.608 315.351 80.496 C 317.943 78.288 319.239 75.36 319.239 71.712 C 319.239 64.896 314.823 61.488 305.991 61.488 H 296.199 V 42.048 H 305.127 C 310.023 41.76 313.527 40.896 315.639 39.456 C 317.751 38.016 318.807 35.76 318.807 32.688 C 318.807 29.712 317.559 27.408 315.063 25.776 C 312.567 24.048 309.303 23.184 305.271 23.184 C 301.239 23.184 297.879 24.096 295.191 25.92 C 292.503 27.744 291.111 30.192 291.015 33.264 H 261.495 C 261.687 22.608 265.767 14.4 273.735 8.64 C 281.703 2.88 292.407 0 305.847 0 Z" />
-                            <path fill="white" d="M 393.779 2.44799 L 409.763 47.808 L 425.747 2.44799 H 459.875 L 419.267 89.424 C 416.483 95.376 412.595 99.936 407.603 103.104 C 402.611 106.176 396.899 107.712 390.467 107.712 C 387.683 107.712 384.467 107.424 380.819 106.848 C 377.267 106.368 374.531 105.744 372.611 104.976 V 79.488 C 376.643 81.216 380.627 82.08 384.563 82.08 C 387.539 82.08 389.747 81.456 391.187 80.208 C 392.627 78.96 393.347 77.376 393.347 75.456 C 393.347 73.824 392.819 71.904 391.763 69.696 L 359.075 2.44799 H 393.779 Z" />
-                            <path fill="white" d="M 502.066 2.44799 V 27.504 C 502.066 32.688 503.074 36.672 505.09 39.456 C 507.202 42.24 510.85 43.632 516.034 43.632 C 520.45 43.632 524.77 42.96 528.994 41.616 V 2.44799 H 560.674 V 105.264 H 528.994 V 64.368 C 521.314 66.864 513.586 68.112 505.81 68.112 C 493.234 68.112 484.162 65.232 478.594 59.472 C 473.122 53.712 470.386 44.448 470.386 31.68 V 2.44799 H 502.066 Z" />
-                            <path fill="white" d="M 643.572 2.44799 L 681.012 105.264 H 648.18 L 643.86 90.576 H 611.172 L 606.42 105.264 H 574.74 L 612.612 2.44799 H 643.572 Z M 618.084 68.544 H 637.524 L 628.308 36.864 H 628.02 L 618.084 68.544 Z" />
-                            <path fill="white" d="M 782.63 2.44799 V 105.264 H 750.95 V 68.544 H 742.886 L 721.718 105.264 H 684.278 L 712.79 64.656 C 707.414 62.64 702.854 59.04 699.11 53.856 C 695.366 48.576 693.494 42.576 693.494 35.856 C 693.494 25.104 697.094 16.848 704.294 11.088 C 711.59 5.32799 721.91 2.44799 735.254 2.44799 H 782.63 Z M 724.454 36.288 C 724.454 39.36 725.462 41.76 727.478 43.488 C 729.59 45.216 732.422 46.08 735.974 46.08 H 750.95 V 26.496 H 735.83 C 732.47 26.496 729.734 27.312 727.622 28.944 C 725.51 30.576 724.454 33.024 724.454 36.288 Z" />
-                            <path fill="white" d="M 93.024 149.448 V 252.264 H 61.344 V 175.8 H 31.68 V 252.264 H 0 V 149.448 H 93.024 Z" />
-                            <path fill="white" d="M 203.874 149.448 V 252.264 H 172.194 V 215.544 H 164.13 L 142.962 252.264 H 105.522 L 134.034 211.656 C 128.658 209.64 124.098 206.04 120.354 200.856 C 116.61 195.576 114.738 189.576 114.738 182.856 C 114.738 172.104 118.338 163.848 125.538 158.088 C 132.834 152.328 143.154 149.448 156.498 149.448 H 203.874 Z M 145.698 183.288 C 145.698 186.36 146.706 188.76 148.722 190.488 C 150.834 192.216 153.666 193.08 157.218 193.08 H 172.194 V 173.496 H 157.074 C 153.714 173.496 150.978 174.312 148.866 175.944 C 146.754 177.576 145.698 180.024 145.698 183.288 Z" />
-                            <path fill="white" d="M 311.834 149.448 V 175.8 H 283.034 V 252.264 H 251.354 V 175.8 H 222.554 V 149.448 H 311.834 Z" />
-                            <path fill="white" d="M 362.374 149.448 V 185.16 H 392.038 V 149.448 H 423.718 V 252.264 H 392.038 V 211.512 H 362.374 V 252.264 H 330.694 V 149.448 H 362.374 Z" />
-                            <path fill="white" d="M 477.111 149.448 V 209.208 H 477.399 L 506.343 149.448 H 540.183 V 252.264 H 510.231 V 191.352 H 509.943 L 480.711 252.264 H 447.159 V 149.448 H 477.111 Z" />
-                            <path fill="white" d="M 595.305 149.448 V 225.912 H 624.969 V 149.448 H 656.649 V 225.912 H 667.593 V 276.312 H 638.217 V 252.264 H 563.625 V 149.448 H 595.305 Z" />
-                            <path fill="white" d="M 743.641 149.448 L 781.081 252.264 H 748.249 L 743.929 237.576 H 711.241 L 706.489 252.264 H 674.809 L 712.681 149.448 H 743.641 Z M 718.153 215.544 H 737.593 L 728.377 183.864 H 728.089 L 718.153 215.544 Z" />
-                            <path fill="white" d="M 824.667 149.448 V 173.64 L 816.747 215.256 H 802.779 L 794.715 173.64 V 149.448 H 824.667 Z M 824.667 223.752 V 252.264 H 794.715 V 223.752 H 824.667 Z" />
-                        </svg>
+                        <img src="ii/img/lucky_friday_2018/title.svg" alt="">
                     </div>
                     <div class="text">Везучая пятница - долгожданный день для книголюбов.<br> Именно в везучую пятницу действует скидка на всё:<br> 30% в магазинах сети и 20% на сайте</div> 
                 </div>
 
-                <a href="#im" class="lucky-friday__img-down"><img src="/ii/img/lucky_friday_2018/down.png"></a>
+                <a href="#im" class="luckyFriday-img_down"><img src="/ii/img/lucky_friday_2018/down.png"></a>
 
             </div>
 
-            <div class="lucky-friday__img-santa"><img src="/ii/img/lucky_friday_2018/big_santa.png"></div>    
+            <div class="luckyFriday-img_santa"><img src="/ii/img/lucky_friday_2018/big_santa.png"></div>    
         </div>
 
-        <div id="im" class="lucky-friday__im bg">
+        <div id="im" class="luckyFriday-im bg">
             <div class="container">
                 <p class="title">Везучая пятница<br>в интернет-магазине</p>
                 
                 <p class="text">В этом году в каждом регионе будет своя Везучая пятница.</p>
-                <p class="text">Ваш город - <a class="link">Петропавловск-Камчатский</a></p>
+                <p class="text">Ваш город - <a class="link city">Петропавловск-Камчатский</a></p>
                     
                 <div class="text__changeable">
-                    <p class="text text_accent">В вашем городе Везучая пятница будет проходить <span class="text_color"> 2 декабря</span>
+                    <p class="text text_accent">В вашем городе Везучая пятница будет проходить <span class="text_color text_date">2 декабря</span>
                         <br>
                         с 00:00 до 23:59 по московскому времени
                     </p>
@@ -391,6 +399,66 @@
                         30 ноября акция действует для держателей Карты Любимого Покупателя,
                         <br>
                         а 14 декабря - для всех
+                    </p>
+                </div>
+
+                <div class="text__changeable hidden">
+                    <p class="text text_accent">
+                        Сегодня акция действует для всех держателей Карты Любимого Покупателя.
+                    </p>
+                    <p class="text">
+                        В вашем городе Везучая пятница будет проходить <span class="text_date">2 декабря</span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
+
+                    <p class="text">
+                        14 декабря акция будет действовать для всей России.
+                    </p>
+                </div>
+
+                <div class="text__changeable hidden">
+                    <p class="text">
+                        <span class="text_accent">В вашем городе Везучая пятница будет проходить <span class="text_date">2 декабря</span></span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
+
+                    <p class="text">
+                        14 декабря акция будет действовать для всей России.
+                    </p>
+                </div>
+
+                <div class="text__changeable hidden">
+                    <p class="text">
+                        <span class="text_accent">Сегодня в вашем городе проходит Везучая пятница</span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
+
+                    <p class="text">
+                        14 декабря акция будет действовать для всей России.
+                    </p>
+                </div>
+
+                <div class="text__changeable hidden">
+                    <p class="text">
+                        Везучая пятница в вашем городе уже прошла, но у вас есть второй шанс!<br>
+                        <span class="text_accent">14 декабря акция будет действовать для всей России</span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
+                </div>
+
+                <div class="text__changeable hidden">
+                    <p class="text">
+                        <span class="text_accent">Только сегодня! Везучая пятница для всей России</span>
+                        <br>
+                        с 00:00 до 23:59 по московскому времени
+                    </p>
+
+                    <p class="text text_accent">
+                        Последний день скидки!
                     </p>
                 </div>
 
@@ -447,7 +515,7 @@
                     </div>
                 </div>
                 
-                <div class="lucky-friday__map bg">
+                <div class="luckyFriday-map bg">
 
                     <div class="map">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1002 569" width="1002" height="569">
@@ -614,7 +682,7 @@
                     Напомнить о скидке
                 </button>
 
-                <button class="btn__go">
+                <button class="btn__go hidden" onclick="location.href='https://www.chitai-gorod.ru'">
                     <span class="btn__icon"></span>
                     Вперед за покупками
                 </button>
@@ -623,7 +691,7 @@
             <div class="vertical-text">-20% на всё в интернет-магазине</div>
         </div>
 
-        <div id="klp" class="lucky-friday__klp bg">
+        <div id="klp" class="luckyFriday-klp bg">
             <div class="container">
                 <div class="title">Везучая пятница<br>в магазинах сети</div>
                 
@@ -651,21 +719,38 @@
             <div class="vertical-text">-30% на всё в магазинах сети</div> 
         </div>
 
-        <div id="rules" class="lucky-friday__rules">
+        <div id="rules" class="luckyFriday-rules">
             <div class="container">
                 <div class="title">Правила акции</div>
                 <div class="text">
-                    Игра проводится со 2.01.2018 по 11.01.2018. В игре могут участвовать только зарегистрированные в интернет-магазине* «Читай-город» пользователи. Купон на скидку 5%, 10% и 15% будет предоставляться в зависимости от количества правильных ответов на загадки. 
+                    <p class="text text_accent">МАГАЗИНЫ СЕТИ</p>
+                    <p class="text">Акция действует во всех розничных магазинах сети «Читай-город», кроме магазина «Гоголь-Моголь». Скидка по Акции в интернет-магазине составляет 20%.</p>
+                    <p class="text">Действие Акции не распространяется на бумагу А4 500 л SvetoCopy 80 г/м2, книгу «Дети Ноя» (Шмитт) (ID товара 2618644), подарочные карты сети, а также на книги из раздела «Скоро в продаже» на сайте интернет-магазина. Скидка по Акции не суммируется со скидками по другим акциям, а также со скидкой по любым картам лояльности сети магазинов «Читай-город» и «Гоголь-Моголь».</p>
+                
+                    <p class="text">Оплата бонусами возможна, начисление бонусов за товар, приобретённый в рамках Акции, не производится. Стоимость покупки в рамках Акции засчитывается в целях определения процентного уровня участника бонусной программы «Читай-город», «Гоголь-Моголь».</p>
+                
+                    <p class="text">На товар, продажа которого осуществляется со скидкой более 30%, в период проведения Акции сохраняется первоначальная (т.е. большая) скидка. Скидка по Акции не распространяется на товар, заказ на который был оформлен в интернет-магазине до даты проведения Акции и получен в дату проведения Акции. </p>
+                
+                    <p class="text">В отношении товара, резервирование которого на сайте www.chitai-gorod.ru было осуществлено в дату проведения Акции, а получение – после даты проведения Акции, скидка по Акции не распространяется. </p>
+                
+                    <p class="text">Количество товара ограничено. Подробная информация об условиях акции, в частности, о сроках и правилах её проведения, об организаторе, иная информация, предоставление которой в соответствии действующим законодательством РФ является обязательным, размещена на сайте www.chitai-gorod.ru («ООО «Новый Книжный Центр», ОГРН 1027700282763, адрес: 127322, г. Москва, Огородный проезд, д. 20, стр. 27, пом. 14).</p>
                 </div>
                 <div class="text">
-                    Скидка по купону действует с 11.01.2018 по 21.02.2018. Скидка по купону действует только при заказе товаров в интернет-магазине «Читай-город». Скидка по купону распространяется на весь ассортимент интернет-магазина. Скидка по купону не суммируется с другими скидками, действующими в интернет-магазине в период проведения игры.
+                    <p class="text text_accent">ИНТЕРНЕТ-МАГАЗИН</p>
+                
+                    <p class="text">Игра проводится со 02.01.2018 по 11.01.2018. В игре могут участвовать только зарегистрированные в интернет-магазине* «Читай-город» пользователи. Купон на скидку 5%, 10% и 15% будет предоставляться в зависимости от количества правильных ответов на загадки.</p>
+              
+                    <p class="text_accent">4 декабря</p>
+                    <p class="text">Адыгея, Архангельская область (включая архипелаг Новая Земля), Белгородская область, Брянская область, Владимирская область, Волгоградская область, Вологодская область, Воронежская область, Дагестан, Ивановская область.</p>
+                
+                    <p class="text_accent">5 декабря</p>
+                    <p class="text">Адыгея, Архангельская область (включая архипелаг Новая Земля), Белгородская область, Брянская область, Владимирская область, Волгоградская область, Вологодская область, Воронежская область, Дагестан, Ивановская область.</p>
+                
+                    <p class="text">При оплате интернет-заказа сумма покупки зачисляется на Карту Любимого Покупателя (для этого введите номер новой карты при оформлении заказа), бонусные баллы не начисляются.</p>
+                
+                    <p class="text">* Интернет-магазин: ООО «Новый Книжный Центр», г. Москва, Огородный проезд, д. 20, стр. 27, ОГРН 1027700282763.</p>
                 </div>
-                <div class="text">
-                    При оплате интернет-заказа сумма покупки зачисляется на Карту Любимого Покупателя (для этого введите номер новой карты при оформлении заказа), бонусные баллы не начисляются.
-                </div>
-                <div class="text text_conditional">
-                    * Интернет-магазин: ООО «Новый Книжный Центр», г. Москва, Огородный проезд, д. 20, стр. 27, ОГРН 1027700282763.
-                </div>
+               
             </div>
         </div>
 

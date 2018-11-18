@@ -1,14 +1,13 @@
-$('.popup-list .popup').hide();
-$('.popup-form').hide();
+
 //анимашка санты на главной
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 1){ 
-		$('.lucky-friday__img-santa').removeClass("none");
-		$('.lucky-friday__img-santa').addClass("right");
+		$('.luckyFriday-img_santa').removeClass("none");
+		$('.luckyFriday-img_santa').addClass("right");
 	}
 	else if ($(this).scrollTop() < 800){
-		$('.lucky-friday__img-santa').removeClass("right");
-		$('.lucky-friday__img-santa').addClass("none");
+		$('.luckyFriday-img_santa').removeClass("right");
+		$('.luckyFriday-img_santa').addClass("none");
 		$(".menu__item").removeClass('active');
 		$(".menu__item:eq(0)").addClass('active');
 	}
@@ -33,7 +32,7 @@ $('.menu__item').click(function() {
 });
 
 //плавный скрол страницы при клике на меню header
-$('.lucky-friday__img-down').click(function() {
+$('.luckyFriday-img_down').click(function() {
 	
 	var hash=window.location.hash;
 	var anchor=$(this);
@@ -48,10 +47,10 @@ $('.region').click(function() {
 	
 	var region = $(this).data('region');
 
-	$('.lucky-friday').removeClass('blur-out');
-	$('.lucky-friday').addClass('blur-in');
+	$('.luckyFriday').removeClass('blur-out');
+	$('.luckyFriday').addClass('blur-in');
 	$('body').css('overflow', 'hidden');
-	$('.popup-list .popup[data-popup~=' + region + ']').fadeIn(500);
+	$('.popup-list .popup[data-popup~=' + region + ']').removeClass('hidden');
 
 	//выборка по соответствию data-region в map с data-date в slider
 	// $('.date:not([data-date~=' + region + '])').removeClass('active');
@@ -102,10 +101,10 @@ $('.date').click(function(){
 		// $('.marker').css('display', 'block');
 		// $('.date').removeClass('active');
 		// $(this).addClass('active');
-		$('.lucky-friday').removeClass('blur-out');
-		$('.lucky-friday').addClass('blur-in');
+		$('.luckyFriday').removeClass('blur-out');
+		$('.luckyFriday').addClass('blur-in');
 		$('body').css('overflow', 'hidden');
-		$('.popup-list .popup[data-popup~=' + date + ']').fadeIn(500);
+		$('.popup-list .popup[data-popup~=' + date + ']').removeClass('hidden');
 	}
 
 });
@@ -123,19 +122,19 @@ $('.marker').click(function(){
 	// $('.marker').removeClass('active');
 	// $(this).addClass('active');
 
-	$('.lucky-friday').removeClass('blur-out');
-	$('.lucky-friday').addClass('blur-in');
+	$('.luckyFriday').removeClass('blur-out');
+	$('.luckyFriday').addClass('blur-in');
 	$('body').css('overflow', 'hidden');
-	$('.popup-list .popup[data-popup~=' + marker + ']').fadeIn(500);
+	$('.popup-list .popup[data-popup~=' + marker + ']').removeClass('hidden');
 });
 
 
 //клик на "Напомнить"
 $('.btn').click(function(){
-	$('.lucky-friday').removeClass('blur-out');
-	$('.lucky-friday').addClass('blur-in');
+	$('.luckyFriday').removeClass('blur-out');
+	$('.luckyFriday').addClass('blur-in');
 	$('body').css('overflow', 'hidden');
-	$('.popup-form').fadeIn(500);
+	$('.popup-form').removeClass('hidden');
 });
 
 //клик на чекбокс
@@ -152,30 +151,43 @@ $('.form__item').click(function(){
 	}
 });
 
+//клик на 'подписаться'
+$('.btn__subscribe').click(function(){
+	$('.img_santa').removeClass("none");
+	$('.img_santa').addClass("right");
+	$('.popup-form .content').addClass('hidden');
+	$('.popup-form .form').addClass('hidden');
+	$('.popup-form .content__change').removeClass('hidden');
+
+});
+
 //клик на "Х" в popup
 $('.close').click(function () { 
-
-	$('.popup-list .popup').fadeOut(500);
-	$('.popup-form').fadeOut(500);
+	$('.img_santa').removeClass("right");
+	$('.img_santa').addClass("none");
+	$('.popup-list .popup').addClass('hidden');
+	$('.popup-form').addClass('hidden');
 	$('body').css('overflow', 'auto');
-	$('.lucky-friday').removeClass('blur-in');
-	$('.lucky-friday').addClass('blur-out');
+	$('.luckyFriday').removeClass('blur-in');
+	$('.luckyFriday').addClass('blur-out');
         
 });
 
 $(document).keyup(function(e) {
      if (e.keyCode == 27) { 
-     	$('.popup-list .popup').fadeOut(500);
-     	$('.popup-form').fadeOut(500);
+     	$('.img_santa').removeClass("right");
+     	$('.img_santa').addClass("none");
+     	$('.popup-list .popup').addClass('hidden');
+     	$('.popup-form').addClass('hidden');
 		$('body').css('overflow', 'auto');
-		$('.lucky-friday').removeClass('blur-in');
-		$('.lucky-friday').addClass('blur-out');
+		$('.luckyFriday').removeClass('blur-in');
+		$('.luckyFriday').addClass('blur-out');
     }
 });
 
 //проверка на дату
 
-var day_a = "2018-11-15", // дата в формате день.месяц.год (начало дня)
+var day_a = "2018-11-19T00:00:00", // дата в формате день.месяц.год (начало дня)
 	today = new Date()
 	
 //двух строчек ниже можно избежать если сразу присылать дату в формате месяц/день/год
@@ -204,12 +216,13 @@ if (today.getTime() >= day_a.getTime() && today.getTime() <= day_b.getTime()) {
  //показываем контент 
 	console.log('сегодня в нужном периоде');
 
-	btn.style.display =  "none";
-	btnGo.style.display =  "block";
+	btn[0].style.display =  "none";
+	btnGo[0].style.display =  "block";
 
 } else if (today.getTime() > day_b.getTime()){
  //скрываем контент 
 	console.log('сегодняшняя дата больше указанного периода');
+
 } else {
 	console.log('сегодняшняя дата меньше указанного периода');
 }
