@@ -19,7 +19,7 @@ gulp.task('sass', function(){ // Создаем таск sass
     return gulp.src('src/ii/sass/**/*.sass') // Берем источник
         .pipe(sass()) // Преобразуем sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-        .pipe(gulp.dest('src/ii/css/lucky_friday_2018')) // Выгружаем результата в папку src/css
+        .pipe(gulp.dest('src/ii/css/lucky-friday')) // Выгружаем результата в папку src/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 

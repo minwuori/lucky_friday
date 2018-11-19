@@ -9,7 +9,6 @@ $(window).scroll(function() {
 		$('.luckyFriday-img_santa').removeClass("right");
 		$('.luckyFriday-img_santa').addClass("none");
 		$(".menu__item").removeClass('active');
-		$(".menu__item:eq(0)").addClass('active');
 	}
 });
 
@@ -152,13 +151,53 @@ $('.form__item').click(function(){
 });
 
 //клик на 'подписаться'
-$('.btn__subscribe').click(function(){
-	$('.img_santa').removeClass("none");
-	$('.img_santa').addClass("right");
-	$('.popup-form .content').addClass('hidden');
-	$('.popup-form .form').addClass('hidden');
-	$('.popup-form .content__change').removeClass('hidden');
+$('.btn__subscribe').click(function(event){
 
+	// button validation
+	
+	event.preventDefault();
+	console.log('btn work');
+
+	function checkbox(){
+		if ($(".checkbox").is(":checked")) {
+			$('.error-non-check').addClass('hidden');
+			return true;
+		} else{
+			console.log('not checked');
+			$('.error-non-check').removeClass('hidden');
+		}
+	}
+
+	function email(){
+		var reg = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{1,4})+$/;
+		var validateElement = document.getElementsByClassName('input-email');
+		for (var i = 0; i < validateElement.length; i++) {
+			if (validateElement[i].value == '') {
+				$('.error-empty-field').removeClass('hidden');
+				console.log('not email');
+			} else if (reg.test(validateElement[i].value) === false){
+				$('.error-empty-field').addClass('hidden');
+				$('.error-invalid-field').removeClass('hidden');
+				
+			} else {
+				$('.error-empty-field').addClass('hidden');
+				$('.error-invalid-field').addClass('hidden');
+				return true;
+			}
+		}
+	}
+
+	email();
+	checkbox();
+	if (email() == true && checkbox() == true) {
+		console.log('btn validate');
+		$('form__message').addClass('hidden');
+		$('.popup-form .content').addClass('hidden');
+		$('.popup-form .form').addClass('hidden');
+		$('.popup-form .content__change').removeClass('hidden');
+		$('.img_santa').removeClass("none");
+		$('.img_santa').addClass("right");
+	}
 });
 
 //клик на "Х" в popup
@@ -185,84 +224,88 @@ $(document).keyup(function(e) {
     }
 });
 
-//проверка на дату
+// //проверка на дату
 
-var dayBegin = "2018-11-16T00:00:00", // дата в формате день.месяц.год (начало дня)
-	today = new Date(),
-	dayKlp = "2018-11-30T00:00:00",
-	dayKlpEnd = "2018-11-30T23:59:59",
-	dayX = "2018-12-14T00:00:00",
-	dayXEnd = "2018-12-14T23:59:59"
+// var dayBegin = "2018-11-19T00:00:00", // дата в формате день.месяц.год (начало дня)
+// 	today = new Date(),
+// 	dayKlp = "2018-11-30T00:00:00",
+// 	dayKlpEnd = "2018-11-30T23:59:59",
+// 	dayX = "2018-12-14T00:00:00",
+// 	dayXEnd = "2018-12-14T23:59:59"
 
 	
-//двух строчек ниже можно избежать если сразу присылать дату в формате месяц/день/год
-// dayBegin = dayBegin.split('.');
-// dayBegin = dayBegin[1]+'/'+dayBegin[0]+'/'+dayBegin[2] ;
+// //двух строчек ниже можно избежать если сразу присылать дату в формате месяц/день/год
+// // dayBegin = dayBegin.split('.');
+// // dayBegin = dayBegin[1]+'/'+dayBegin[0]+'/'+dayBegin[2] ;
 
-dayBegin = new Date(Date.parse(dayBegin));
-dayBegin.setDate(dayBegin.getDate());
+// dayBegin = new Date(Date.parse(dayBegin));
+// dayBegin.setDate(dayBegin.getDate());
 
-var dayEnd; //(конец дня)i=
-dayEnd = new Date(Date.parse(dayBegin));
-dayEnd.setHours(dayBegin.getHours() + 23);
-dayEnd.setMinutes(dayBegin.getMinutes() + 59);
+// var dayEnd; //(конец дня)i=
+// dayEnd = new Date(Date.parse(dayBegin));
+// dayEnd.setHours(dayBegin.getHours() + 23);
+// dayEnd.setMinutes(dayBegin.getMinutes() + 59);
 
-dayKlp = new Date(Date.parse(dayKlp));
-dayKlp.setDate(dayKlp.getDate());
+// dayKlp = new Date(Date.parse(dayKlp));
+// dayKlp.setDate(dayKlp.getDate());
 
-dayKlpEnd = new Date(Date.parse(dayKlpEnd));
-dayKlpEnd.setDate(dayKlpEnd.getDate());
+// dayKlpEnd = new Date(Date.parse(dayKlpEnd));
+// dayKlpEnd.setDate(dayKlpEnd.getDate());
 
-dayX = new Date(Date.parse(dayX));
-dayX.setDate(dayX.getDate());
+// dayX = new Date(Date.parse(dayX));
+// dayX.setDate(dayX.getDate());
 
-dayXEnd = new Date(Date.parse(dayXEnd));
-dayXEnd.setDate(dayXEnd.getDate());
+// dayXEnd = new Date(Date.parse(dayXEnd));
+// dayXEnd.setDate(dayXEnd.getDate());
 
-console.log('начало дня: ' + dayBegin);
-console.log('конец дня: ' + dayEnd);
-console.log('cегодня: ' + today);
-
-
-if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()) {
- //показываем контент 
-	console.log('сегодня в нужном периоде');
-	$('.text__changeable').addClass('hidden');
-	$('.text__changeable_day').removeClass('hidden');
-	$('.btn').css('display', 'none');
-	$('.btn_go').css('display', 'block');
-
-}else if (today.getTime() >= dayKlp.getTime() && today.getTime() <= dayKlpEnd.getTime()){
-	console.log('сегодняшняя дата 30 ноября');
-	$('.region').addClass('full');
-	$('.marker').css('display', 'none');
-	$('.marker-full_14').addClass('hidden');
-	$('.marker-full_30').removeClass('hidden');
-	$('.text__changeable').addClass('hidden');
-	$('.text__changeable_klp').removeClass('hidden');
-	$('.btn').css('display', 'none');
-	$('.btn_go').css('display', 'block');
+// console.log('начало дня: ' + dayBegin);
+// console.log('конец дня: ' + dayEnd);
+// console.log('cегодня: ' + today);
 
 
-}else if (today.getTime() >= dayX.getTime() && today.getTime() <= dayXEnd.getTime()){
-	console.log('сегодняшняя дата 14');
-	$('.region').addClass('full');
-	$('.marker').css('display', 'none');
-	$('.marker-full_14').removeClass('hidden');
-	$('.marker-full_30').addClass('hidden');
-	$('.calendar').css('display', 'none');
-	$('.text__changeable').addClass('hidden');
-	$('.text__changeable_day-x').removeClass('hidden').css('margin-bottom', '60px');
-	$('.btn').css('display', 'none');
-	$('.btn_go').css('display', 'block');
+// if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()) {
+//  //показываем контент 
+// 	console.log('сегодня в нужном периоде');
+// 	$('.text__changeable').addClass('hidden');
+// 	$('.text__changeable_day').removeClass('hidden');
+// 	$('.btn').css('display', 'none');
+// 	$('.btn__go').css('display', 'block');
+
+// }else if (today.getTime() >= dayKlp.getTime() && today.getTime() <= dayKlpEnd.getTime()){
+// 	console.log('сегодняшняя дата 30 ноября');
+// 	$('.region').addClass('full');
+// 	$('.marker').css('display', 'none');
+// 	$('.marker-full_14').addClass('hidden');
+// 	$('.marker-full_30').removeClass('hidden');
+// 	$('.text__changeable').addClass('hidden');
+// 	$('.text__changeable_klp').removeClass('hidden');
+// 	$('.btn').css('display', 'none');
+// 	$('.btn__go').css('display', 'block');
 
 
-}else if (today.getTime() > dayEnd.getTime()){
- //скрываем контент 
-	console.log('сегодняшняя дата больше указанного периода');
-	$('.text__changeable').addClass('hidden');
-	$('.text__changeable_after-day').removeClass('hidden');
+// }else if (today.getTime() >= dayX.getTime() && today.getTime() <= dayXEnd.getTime()){
+// 	console.log('сегодняшняя дата 14');
+// 	$('.region').addClass('full');
+// 	$('.marker').css('display', 'none');
+// 	$('.marker-full_14').removeClass('hidden');
+// 	$('.marker-full_30').addClass('hidden');
+// 	$('.calendar').css('display', 'none');
+// 	$('.text__changeable').addClass('hidden');
+// 	$('.text__changeable_day-x').removeClass('hidden').css('margin-bottom', '60px');
+// 	$('.btn').css('display', 'none');
+// 	$('.btn__go').css('display', 'block');
 
-} else {
-	console.log('сегодняшняя дата меньше указанного периода');
-}
+
+// }else if (today.getTime() > dayEnd.getTime()){
+//  //скрываем контент 
+// 	console.log('сегодняшняя дата больше указанного периода');
+// 	$('.text__changeable').addClass('hidden');
+// 	$('.text__changeable_after-day').removeClass('hidden');
+// 	$('.btn__go').css('display', 'none');
+// 	$('.btn').css('display', 'block');
+
+// } else {
+// 	console.log('сегодняшняя дата меньше указанного периода');
+// 	$('.btn__go').css('display', 'none');
+// 	$('.btn').css('display', 'block');
+// }

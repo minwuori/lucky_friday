@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic");
-@import url("https://fonts.googleapis.com/css?family=Helvetica&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;subset=cyrillic");
 * 
 	margin: 0
 	padding: 0
@@ -40,11 +38,12 @@
 		text-align: right
 
 	.title
+		font-family: Roboto
+		font-weight: 900 
 		font-size: 64px
 		line-height: 71px
 		color: #EB1C24
 		text-align: center
-		font-weight: bold
 		margin-bottom: 90px
 
 	.text
@@ -53,7 +52,7 @@
 		text-align: center
 		margin-bottom: 40px
 	.text_accent
-		font-weight: bold
+		font-weight: 900
 		
 	.text_color
 		color: #EB1C24
@@ -118,16 +117,16 @@
 			opacity: 0
 			
 	.blur-in
-		-webkit-animation: blur 1s forwards;
-		-moz-animation: blur 1s forwards;
-		-o-animation: blur 1s forwards;
-		animation: blur 1s forwards;
+		-webkit-animation: blur 0.1s forwards;
+		-moz-animation: blur 0.1s forwards;
+		-o-animation: blur 0.1s forwards;
+		animation: blur 0.1s forwards;
 
 	.blur-out
-		-webkit-animation: blur-out 0.5s forwards;
-		-moz-animation: blur-out 0.5s forwards;
-		-o-animation: blur-out 0.5s forwards;
-		animation: blur-out 0.5s forwards;
+		-webkit-animation: blur-out 0.1s forwards;
+		-moz-animation: blur-out 0.1s forwards;
+		-o-animation: blur-out 0.1s forwards;
+		animation: blur-out 0.1s forwards;
 
 	@-webkit-keyframes blur 
 		0%
@@ -366,7 +365,7 @@
 			-webkit-flex-direction: column
 			-ms-flex-direction: column
 			flex-direction: column
-			width: 630px 
+			width: 645px 
 		.title
 			text-align: left
 		.img_santa
@@ -392,16 +391,15 @@
 			margin-bottom: 20px
 			cursor: pointer
 			
+		
 		.checkbox
-			display: inline-block;
-		input[type=checkbox]
 			display: none
 
 		label
 			padding-left: 35px
 			cursor: pointer
 
-		input[type=checkbox] + label:before
+		.checkbox + label:before
 			position: absolute;
 			left: 0px;
 			top: 1px;  
@@ -415,10 +413,10 @@
 			background-color: #ffffff;
 			background-image: none;
 
-		input[type=checkbox]:hover + label:before
+		.checkbox:hover + label:before
 			border: 2px solid #EB1C24;
 
-		input[type=checkbox]:checked + label:before
+		.checkbox:checked + label:before
 			position: absolute;
 			left: 0px;
 			top: 1px;
@@ -426,7 +424,7 @@
 			height: 24px;
 			content: "";
 			margin-right: 5px;
-			background-image: url(/ii/img/lucky_friday_2018/check.png);
+			background-image: url(/ii/img/lucky-friday/check.svg);
 			border: none;
 			vertical-align: middle;
 			z-index: 6
@@ -590,7 +588,7 @@
 		.snowflake-17
 			position: absolute
 			bottom: 182px
-			left: 49%
+			left: 48%
 		.snowflake-18
 			position: absolute
 			bottom: 124px
@@ -627,7 +625,7 @@
 			cursor: pointer
 
 		.container
-			margin-top: -43px
+			margin-top: -32px
 			-webkit-flex-grow: 1
 			flex-grow: 1
 			color: #ffffff
@@ -660,6 +658,7 @@
 			cursor: pointer
 			.active, .active:hover
 				outline: 6px solid #EB1C24
+				z-index: 2
 				.date__img
 					display: block
 		.vertical-text		
@@ -671,6 +670,7 @@
 			width: 80px
 			height: 80px
 			border: solid 1px rgba(0, 0, 0, 0.1)
+			border-right: transparent
 			display: flex
 			flex-direction: column
 			justify-content: center
@@ -678,8 +678,24 @@
 			margin-bottom: 94px
 			margin-top: 50px
 			text-align: center
+			
+		.date:last-child
+			border: solid 1px rgba(0, 0, 0, 0.1)
 		.date:hover
 			border: 1px solid #EB1C24
+			border-right: transparent
+		.date:hover + .date
+			border-left: 1px solid #EB1C24
+		.date:hover:first-child 
+			border: solid 1px rgba(0, 0, 0, 0.1)
+			border-right: transparent
+			cursor: default
+		.date:hover:first-child + .date
+			border-left: solid 1px rgba(0, 0, 0, 0.1)
+		.date:hover:last-child
+			cursor: default
+			border: solid 1px rgba(0, 0, 0, 0.1)
+		
 		.date__img
 			position: absolute
 			top: -50px
@@ -687,24 +703,29 @@
 			
 		.date__day
 			font-size: 36px
-			font-weight: bold
+			font-weight: 900
 		.date:last-child
 			color: #EB1C24
 		.date:first-child
 			color: #EB1C24
+			
+		.date__month
+			font-size: 14px
+			font-weight: 500
+			
 		.btn
 			width: 400px 
 			height: 72px
 			margin-bottom: 200px
 			.btn__icon
-				background: url(/ii/img/lucky_friday_2018/bell.png) no-repeat
+				background: url(/ii/img/lucky-friday/bell.svg) no-repeat
 				padding: 5px 30px 0 20px
 		.btn__go
 			width: 400px 
 			height: 72px
 			margin-bottom: 200px
 			.btn__icon
-				background: url(/ii/img/lucky_friday_2018/santa_btn.png) no-repeat	
+				background: url(/ii/img/lucky-friday/santa_btn.svg) no-repeat	
 				padding: 5px 50px 0 20px
 				
 	.luckyFriday-map
@@ -812,7 +833,7 @@
 			height: 100%
 			display: flex
 			align-items: center
-			margin-right: 120px
+			margin-right: 100px
 		.footer__menu_item:last-child
 			margin-right: 0
 		.footer__menu a
@@ -834,6 +855,11 @@
 		.luckyFriday-klp
 			.text
 				margin-left: 60px
+	@media(max-width: 1250px)
+		
+		.popup-form
+			.img_santa
+				display: none
 
 	@media(max-width: 1360px)
 		.header
