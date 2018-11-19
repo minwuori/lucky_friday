@@ -151,12 +151,9 @@ $('.form__item').click(function(){
 });
 
 //клик на 'подписаться'
-$('.btn__subscribe').click(function(event){
+$('form').submit(function(e){
 
 	// button validation
-	
-	event.preventDefault();
-	console.log('btn work');
 
 	function checkbox(){
 		if ($(".checkbox").is(":checked")) {
@@ -187,17 +184,32 @@ $('.btn__subscribe').click(function(event){
 		}
 	}
 
-	email();
-	checkbox();
 	if (email() == true && checkbox() == true) {
-		console.log('btn validate');
-		$('form__message').addClass('hidden');
-		$('.popup-form .content').addClass('hidden');
-		$('.popup-form .form').addClass('hidden');
-		$('.popup-form .content__change').removeClass('hidden');
-		$('.img_santa').removeClass("none");
-		$('.img_santa').addClass("right");
+		 console.log( $( this ).serializeArray() );
+		$.ajax({
+			type: $(this).attr('method'),
+			url: $(this).attr('action'),
+			data: $(this).serializeArray(),
+			cache: false,
+			success: function (res) {
+				console.log(res);
+				$('form__message').addClass('hidden');
+				$('.popup-form .content').addClass('hidden');
+				$('.popup-form .form').addClass('hidden');
+				$('.popup-form .content__change').removeClass('hidden');
+				$('.img_santa').removeClass("none");
+				$('.img_santa').addClass("right");
+			}
+
+		})
+		
 	}
+
+	
+
+	e.preventDefault();
+	
+	
 });
 
 //клик на "Х" в popup

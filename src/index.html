@@ -63,20 +63,19 @@
                     <a href="https://www.chitai-gorod.ru/"class="link">На главную</a>
                     </div>
                 </div>
-                <form class="form" action="">
-
+                <form class="form" action="http://127.0.0.1:3005/" method="post">
                     <div class="form__item">
-                        <input type="checkbox" class="checkbox" name="checkbox-november" id="checkbox-november" datacheck="check"/>
+                        <input type="checkbox" class="checkbox" name="checkbox-nov" id="checkbox-november" value="1"/>
                         <label for="checkbox-november">
                         30 ноября для держателей КЛП </label>
                     </div>
                     <div class="form__item">
-                        <input type="checkbox" class="checkbox" name="checkbox-november" id="checkbox-myday" datacheck="check"/>
+                        <input type="checkbox" class="checkbox" name="checkbox-date" id="checkbox-myday" value="1"/>
                         <label for="checkbox-myday">
                         Везучая пятница в моём регионе</label>
                     </div>
                     <div class="form__item">
-                        <input type="checkbox" class="checkbox" name="checkbox-november" id="checkbox-december" datacheck="check"/>
+                        <input type="checkbox" class="checkbox" name="checkbox-dec" id="checkbox-december" value="1"/>
                         <label for="checkbox-december">
                         Везучая пятница по всей России 14 декабря</label>
                     </div>
@@ -84,7 +83,7 @@
                        
                     <div class="form__subscribe">
                         <div class="email">
-                            <input type="text" placeholder="Ваш email" class="input-email"/>
+                            <input name="email"  value="" type="text" placeholder="Ваш email" class="input-email"/>
                         </div>
                         <input type="submit" class="btn__subscribe" name="Подписаться" value="Подписаться" required="Поле обязательно для заполнения" />
                     </div>
