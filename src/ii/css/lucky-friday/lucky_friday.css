@@ -3,110 +3,149 @@
   margin: 0;
   padding: 0; }
 
-#lf {
+body {
   font-family: Roboto;
   font-size: 18px; }
-  #lf a {
-    text-decoration: underline;
-    color: black; }
-  #lf .luckyFriday {
-    height: 100%;
-    width: 100%;
-    min-width: 1002px; }
-  #lf .bg {
-    position: relative;
-    background: transparent; }
-  #lf .container {
-    max-width: 1260px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    font-size: inherit;
-    padding: 0 20px; }
-  #lf .blue {
-    color: #26A9E0; }
-  #lf .white {
-    color: #ffffff; }
-  #lf .text-right {
-    text-align: right; }
-  #lf .title {
-    font-family: Roboto;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 71px;
-    color: #EB1C24;
-    text-align: center;
-    margin-bottom: 90px; }
-  #lf .text {
-    font-size: 24px;
-    line-height: 26px;
-    text-align: center;
-    margin-bottom: 40px; }
-  #lf .text_accent {
-    font-weight: 900; }
-  #lf .text_color {
-    color: #EB1C24; }
-  #lf .text_conditional {
-    font-size: 16px;
-    line-height: 28px; }
-  #lf .link {
-    color: #EB1C24;
-    text-decoration: underline;
-    cursor: pointer; }
-  #lf .link:hover {
-    color: #CB1B22; }
-  #lf .vertical-text {
-    -webkit-writing-mode: tb-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: tb-rl;
-    background: #EB1C24;
-    color: #ffffff;
-    font-size: 24px;
-    line-height: 28px;
-    height: 440px;
-    width: 60px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  #lf button {
-    background: #EB1C24;
-    border: 0;
-    outline: 0;
-    color: #ffffff;
-    font-size: 24px;
-    cursor: pointer;
-    -webkit-border-radius: 36px;
-    border-radius: 36px;
-    font-size: 24px;
-    -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
-            box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
-  #lf button:hover {
-    background: #D61B23; }
-  #lf .animate-1 {
-    -webkit-animation: pulse 9s infinite;
-            animation: pulse 9s infinite; }
-  #lf .animate-2 {
-    -webkit-animation: pulse 5s infinite;
-            animation: pulse 5s infinite; }
-  #lf .animate-3 {
-    -webkit-animation: pulse 12s infinite;
-            animation: pulse 12s infinite; }
-  #lf .animate-4 {
-    -webkit-animation: pulse 3s infinite;
-            animation: pulse 3s infinite; }
-  #lf .animate-5 {
-    -webkit-animation: pulse 7s infinite;
-            animation: pulse 7s infinite; }
+
+.input {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 200px;
+  height: 35px;
+  padding: 0 10px;
+  border: 1px solid #b2b2b2;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 35px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+
+#lf a {
+  text-decoration: underline;
+  color: black; }
+
+#lf .luckyFriday {
+  height: 100%;
+  width: 100%;
+  min-width: 1002px; }
+
+#lf .bg {
+  position: relative;
+  background: transparent; }
+
+#lf .container {
+  max-width: 1260px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  font-size: inherit;
+  padding: 0 20px; }
+
+#lf .blue {
+  color: #26A9E0; }
+
+#lf .white {
+  color: #ffffff; }
+
+#lf .text-right {
+  text-align: right; }
+
+#lf .title {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 71px;
+  color: #EB1C24;
+  text-align: center;
+  margin-bottom: 90px; }
+
+#lf .text {
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 40px; }
+
+#lf .text_accent {
+  font-weight: 900; }
+
+#lf .text_color {
+  color: #EB1C24; }
+
+#lf .text_conditional {
+  font-size: 16px;
+  line-height: 28px; }
+
+#lf .link {
+  color: #EB1C24;
+  text-decoration: underline;
+  cursor: pointer; }
+
+#lf .link:hover {
+  color: #CB1B22; }
+
+#lf .vertical-text {
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  background: #EB1C24;
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 28px;
+  height: 440px;
+  width: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+#lf button {
+  background: #EB1C24;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  -webkit-border-radius: 36px;
+  border-radius: 36px;
+  font-size: 24px;
+  -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
+          box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
+
+#lf button:hover {
+  background: #D61B23; }
+
+#lf .animate-1 {
+  -webkit-animation: pulse 9s infinite;
+          animation: pulse 9s infinite; }
+
+#lf .animate-2 {
+  -webkit-animation: pulse 5s infinite;
+          animation: pulse 5s infinite; }
+
+#lf .animate-3 {
+  -webkit-animation: pulse 12s infinite;
+          animation: pulse 12s infinite; }
+
+#lf .animate-4 {
+  -webkit-animation: pulse 3s infinite;
+          animation: pulse 3s infinite; }
+
+#lf .animate-5 {
+  -webkit-animation: pulse 7s infinite;
+          animation: pulse 7s infinite; }
 
 @-webkit-keyframes pulse {
   0% {
@@ -123,12 +162,14 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
-  #lf .blur-in {
-    -webkit-animation: blur 0.1s forwards;
-    animation: blur 0.1s forwards; }
-  #lf .blur-out {
-    -webkit-animation: blur-out 0.1s forwards;
-    animation: blur-out 0.1s forwards; }
+
+#lf .blur-in {
+  -webkit-animation: blur 0.1s forwards;
+  animation: blur 0.1s forwards; }
+
+#lf .blur-out {
+  -webkit-animation: blur-out 0.1s forwards;
+  animation: blur-out 0.1s forwards; }
 
 @-webkit-keyframes blur {
   0% {
@@ -185,634 +226,46 @@
     -o-filter: blur(0px);
     -ms-filter: blur(0px);
     filter: blur(0px); } }
-  #lf .close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    z-index: 4;
-    cursor: pointer; }
-  #lf .close:hover path {
-    fill: #EB1C24; }
-  #lf .popup {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.9);
-    overflow: scroll; }
-    #lf .popup .container {
-      width: auto;
-      position: relative;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      padding: 0; }
-    #lf .popup .title {
-      margin-bottom: 85px; }
-    #lf .popup .text {
-      line-height: 28px;
-      margin-bottom: 24px; }
-    #lf .popup .content {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-justify-content: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    #lf .popup .content__list {
-      list-style: none;
-      border: none;
-      text-align: center;
-      font-size: 24px;
-      line-height: 39px; }
-  #lf .popup:nth-child(7) {
-    padding-left: 20px; }
-    #lf .popup:nth-child(7) .content__list {
-      text-align: left;
-      margin-right: 20px;
-      width: 300px; }
-    #lf .popup:nth-child(7) .content__list:last-child {
-      margin-right: 0; }
-  #lf .popup-form {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.9); }
-    #lf .popup-form .snowflake-1 {
-      position: absolute;
-      top: 117px;
-      left: 132px; }
-    #lf .popup-form .snowflake-2 {
-      position: absolute;
-      top: 117px;
-      left: 494px; }
-    #lf .popup-form .snowflake-3 {
-      position: absolute;
-      top: 47px;
-      left: 896px; }
-    #lf .popup-form .snowflake-4 {
-      position: absolute;
-      top: 120px;
-      left: 1316px; }
-    #lf .popup-form .snowflake-5 {
-      position: absolute;
-      top: 323px;
-      left: 1544px; }
-    #lf .popup-form .snowflake-6 {
-      position: absolute;
-      top: 383px;
-      left: 348px; }
-    #lf .popup-form .snowflake-7 {
-      position: absolute;
-      top: 324px;
-      right: 1575px; }
-    #lf .popup-form .snowflake-8 {
-      position: absolute;
-      top: 620px;
-      left: 168px; }
-    #lf .popup-form .snowflake-9 {
-      position: absolute;
-      top: 561px;
-      left: 1392px; }
-    #lf .popup-form .snowflake-10 {
-      position: absolute;
-      top: 692px;
-      right: 1823px; }
-    #lf .popup-form .container {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: start;
-      -webkit-align-items: flex-start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      -webkit-flex-direction: column;
+
+#lf .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 4;
+  cursor: pointer; }
+
+#lf .close:hover path {
+  fill: #EB1C24; }
+
+#lf .pop-up {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-              flex-direction: column;
-      width: 645px; }
-    #lf .popup-form .title {
-      text-align: left; }
-    #lf .popup-form .img_santa {
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      -webkit-transition: all 5s ease;
-      -o-transition: all 5s ease;
-      transition: all 5s ease; }
-      #lf .popup-form .img_santa.right {
-        left: 2500px;
-        bottom: 0; }
-      #lf .popup-form .img_santa.none {
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none; }
-    #lf .popup-form .text {
-      width: 580px;
-      text-align: left;
-      line-height: 28px; }
-    #lf .popup-form .form__item {
-      position: relative;
-      font-size: 24px;
-      line-height: 28px;
-      cursor: pointer;
-      margin-bottom: 20px;
-      cursor: pointer; }
-    #lf .popup-form .checkbox {
-      display: none; }
-    #lf .popup-form label {
-      padding-left: 35px;
-      cursor: pointer; }
-    #lf .popup-form .checkbox + label:before {
-      position: absolute;
-      left: 0px;
-      top: 1px;
-      content: "";
-      width: 24px;
-      height: 24px;
-      border: 2px solid #E0E0E0;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      -webkit-border-radius: 4px;
-      border-radius: 4px;
-      background-color: #ffffff;
-      background-image: none; }
-    #lf .popup-form .checkbox:hover + label:before {
-      border: 2px solid #EB1C24; }
-    #lf .popup-form .checkbox:checked + label:before {
-      position: absolute;
-      left: 0px;
-      top: 1px;
-      width: 24px;
-      height: 24px;
-      content: "";
-      margin-right: 5px;
-      background-image: url(/ii/img/lucky-friday/check.svg);
-      border: none;
-      vertical-align: middle;
-      z-index: 6; }
-    #lf .popup-form .form__subscribe {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      margin-top: 50px; }
-    #lf .popup-form .email {
-      margin-right: 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      width: 320px; }
-      #lf .popup-form .email input {
-        width: 320px;
-        font-size: 24px;
-        line-height: 28px;
-        color: rgba(0, 0, 0, 0.8);
-        border: none;
-        outline: none;
-        margin-top: 21px;
-        background: transparent; }
-      #lf .popup-form .email input::-moz-placeholder, #lf .popup-form .email input::-webkit-input-placeholder {
-        color: rgba(0, 0, 0, 0.3); }
-    #lf .popup-form .btn__subscribe {
-      width: 250px;
-      height: 72px;
-      font-size: 24px;
-      line-height: 28px;
-      background: #EB1C24;
-      border: 0;
-      outline: 0;
-      color: #ffffff;
-      font-size: 24px;
-      cursor: pointer;
-      -webkit-border-radius: 36px;
-      border-radius: 36px;
-      font-size: 24px;
-      -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
-              box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
-    #lf .popup-form .btn__subscribe:hover {
-      background: #D61B23; }
-    #lf .popup-form .form__message {
-      margin-top: 12px;
-      color: #EB1C24;
-      font-size: 16px;
-      line-height: 19px; }
-  #lf .header {
-    color: #ffffff;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: 1260px;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  #lf .header__logo {
-    margin: 20px 40px 20px 0; }
-  #lf .menu {
-    list-style: none;
-    border: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-right: 20px; }
-  #lf .menu__item {
-    font-size: 19px;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-right: 30px; }
-  #lf .menu a {
-    color: inherit;
-    opacity: 0.6;
-    text-decoration: none;
-    cursor: pointer;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  #lf .menu a:hover {
-    opacity: 1; }
-  #lf .menu .active {
-    opacity: 1; }
-  #lf .luckyFriday-first {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
-    background: #eb1c24;
-    overflow: hidden; }
-    #lf .luckyFriday-first .snowflake-1 {
-      position: absolute;
-      top: 61px;
-      left: -140px; }
-    #lf .luckyFriday-first .snowflake-2 {
-      position: absolute;
-      top: 5px;
-      left: 464px; }
-    #lf .luckyFriday-first .snowflake-3 {
-      position: absolute;
-      top: 20px;
-      right: -47px; }
-    #lf .luckyFriday-first .snowflake-4 {
-      position: absolute;
-      top: 140px;
-      left: 248px; }
-    #lf .luckyFriday-first .snowflake-5 {
-      position: absolute;
-      top: 110px;
-      left: 408px; }
-    #lf .luckyFriday-first .snowflake-6 {
-      position: absolute;
-      top: 70px;
-      left: 719px; }
-    #lf .luckyFriday-first .snowflake-7 {
-      position: absolute;
-      top: 147px;
-      right: 235px; }
-    #lf .luckyFriday-first .snowflake-8 {
-      position: absolute;
-      top: 324px;
-      left: -220px; }
-    #lf .luckyFriday-first .snowflake-9 {
-      position: absolute;
-      top: 269px;
-      left: 62px; }
-    #lf .luckyFriday-first .snowflake-10 {
-      position: absolute;
-      top: 324px;
-      right: 119px; }
-    #lf .luckyFriday-first .snowflake-11 {
-      position: absolute;
-      top: 264px;
-      right: -124px; }
-    #lf .luckyFriday-first .snowflake-12 {
-      position: absolute;
-      top: 538px;
-      left: -21px; }
-    #lf .luckyFriday-first .snowflake-13 {
-      position: absolute;
-      top: 550px;
-      right: -8px; }
-    #lf .luckyFriday-first .snowflake-14 {
-      position: absolute;
-      top: 720px;
-      left: -124px; }
-    #lf .luckyFriday-first .snowflake-15 {
-      position: absolute;
-      top: 740px;
-      left: 124px; }
-    #lf .luckyFriday-first .snowflake-16 {
-      position: absolute;
-      bottom: 105px;
-      left: 372px; }
-    #lf .luckyFriday-first .snowflake-17 {
-      position: absolute;
-      bottom: 182px;
-      left: 48%; }
-    #lf .luckyFriday-first .snowflake-18 {
-      position: absolute;
-      bottom: 124px;
-      right: 394px; }
-    #lf .luckyFriday-first .snowflake-19 {
-      position: absolute;
-      bottom: 277px;
-      right: 267px; }
-    #lf .luckyFriday-first .snowflake-20 {
-      position: absolute;
-      bottom: 45px;
-      right: 101px; }
-    #lf .luckyFriday-first .snowflake-21 {
-      position: absolute;
-      bottom: 182px;
-      right: -145px; }
-    #lf .luckyFriday-first .luckyFriday-img_santa {
-      position: absolute;
-      bottom: 0;
-      left: 80px;
-      -webkit-transition: all 5s ease;
-      -o-transition: all 5s ease;
-      transition: all 5s ease; }
-      #lf .luckyFriday-first .luckyFriday-img_santa.right {
-        left: 2500px;
-        bottom: 0; }
-      #lf .luckyFriday-first .luckyFriday-img_santa.none {
-        -webkit-transition: none;
-        -o-transition: none;
-        transition: none; }
-    #lf .luckyFriday-first .luckyFriday-img_down {
-      position: absolute;
-      bottom: 60px;
-      left: 48%;
-      cursor: pointer; }
-    #lf .luckyFriday-first .container {
-      margin-top: -32px;
-      -webkit-flex-grow: 1;
-      -webkit-box-flex: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1;
-      color: #ffffff;
-      position: relative;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
-    #lf .luckyFriday-first .title {
-      margin-bottom: 0; }
-    #lf .luckyFriday-first .text {
-      margin-top: 40px;
-      text-align: center; }
-  #lf .luckyFriday-im .container {
-    margin-top: 190px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  #lf .luckyFriday-im .text {
-    text-align: center; }
-  #lf .luckyFriday-im .calendar {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    cursor: pointer; }
-    #lf .luckyFriday-im .calendar .active, #lf .luckyFriday-im .calendar .active:hover {
-      outline: 6px solid #EB1C24;
-      z-index: 2; }
-      #lf .luckyFriday-im .calendar .active .date__img, #lf .luckyFriday-im .calendar .active:hover .date__img {
-        display: block; }
-  #lf .luckyFriday-im .vertical-text {
-    position: absolute;
-    left: 0;
-    top: 350px; }
-  #lf .luckyFriday-im .date {
-    width: 80px;
-    height: 80px;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    border-right: transparent;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9);
+  overflow: scroll; }
+  #lf .pop-up .container {
+    width: auto;
     position: relative;
-    margin-bottom: 94px;
-    margin-top: 50px;
-    text-align: center; }
-  #lf .luckyFriday-im .date:last-child {
-    border: solid 1px rgba(0, 0, 0, 0.1); }
-  #lf .luckyFriday-im .date:hover {
-    border: 1px solid #EB1C24;
-    border-right: transparent; }
-  #lf .luckyFriday-im .date:hover + .date {
-    border-left: 1px solid #EB1C24; }
-  #lf .luckyFriday-im .date:hover:first-child {
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    border-right: transparent;
-    cursor: default; }
-  #lf .luckyFriday-im .date:hover:first-child + .date {
-    border-left: solid 1px rgba(0, 0, 0, 0.1); }
-  #lf .luckyFriday-im .date:hover:last-child {
-    cursor: default;
-    border: solid 1px rgba(0, 0, 0, 0.1); }
-  #lf .luckyFriday-im .date__img {
-    position: absolute;
-    top: -50px;
-    display: none; }
-  #lf .luckyFriday-im .date__day {
-    font-size: 36px;
-    font-weight: 900; }
-  #lf .luckyFriday-im .date:last-child {
-    color: #EB1C24; }
-  #lf .luckyFriday-im .date:first-child {
-    color: #EB1C24; }
-  #lf .luckyFriday-im .date__month {
-    font-size: 14px;
-    font-weight: 500; }
-  #lf .luckyFriday-im .btn {
-    width: 400px;
-    height: 72px;
-    margin-bottom: 200px; }
-    #lf .luckyFriday-im .btn .btn__icon {
-      background: url(/ii/img/lucky-friday/bell.svg) no-repeat;
-      padding: 5px 30px 0 20px; }
-  #lf .luckyFriday-im .btn__go {
-    width: 400px;
-    height: 72px;
-    margin-bottom: 200px; }
-    #lf .luckyFriday-im .btn__go .btn__icon {
-      background: url(/ii/img/lucky-friday/santa_btn.svg) no-repeat;
-      padding: 5px 50px 0 20px; }
-  #lf .luckyFriday-map {
-    position: relative;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 100px; }
-    #lf .luckyFriday-map svg {
-      margin: 0 auto;
-      overflow: visible;
-      width: 100%; }
-    #lf .luckyFriday-map .region {
-      cursor: pointer;
-      -webkit-transition: all 150ms;
-      -o-transition: all 150ms;
-      transition: all 150ms; }
-      #lf .luckyFriday-map .region.active path, #lf .luckyFriday-map .region.full path, #lf .luckyFriday-map .region.full:hover path {
-        fill: #EB1C24; }
-      #lf .luckyFriday-map .region.active:hover path {
-        fill: #D61B23; }
-    #lf .luckyFriday-map .region:hover path {
-      fill: #CCCCCC; }
-    #lf .luckyFriday-map .marker {
-      cursor: pointer;
-      -webkit-transition: all 150ms;
-      -o-transition: all 150ms;
-      transition: all 150ms; }
-      #lf .luckyFriday-map .marker.active path {
-        fill-opacity: 1; }
-    #lf .luckyFriday-map .marker-full_30 {
-      cursor: pointer; }
-    #lf .luckyFriday-map .marker-full_14 {
-      cursor: pointer; }
-  #lf .luckyFriday-klp .container {
-    position: relative;
-    margin-top: 190px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -826,99 +279,435 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  #lf .luckyFriday-klp .text {
-    margin-bottom: 90px; }
-  #lf .luckyFriday-klp .content {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    margin-bottom: 130px; }
-  #lf .luckyFriday-klp .content__text {
-    text-align: left;
-    margin-left: 45px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0; }
+  #lf .pop-up .title {
+    margin-bottom: 85px; }
+  #lf .pop-up .text {
     line-height: 28px;
-    font-size: 24px; }
-  #lf .luckyFriday-klp .vertical-text {
-    position: absolute;
-    left: 0;
-    top: 20px; }
-  #lf .luckyFriday-rules .container {
-    position: relative;
-    margin-top: 190px;
+    margin-bottom: 24px; }
+  #lf .pop-up .content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 100%;
-    margin-bottom: 110px; }
-  #lf .luckyFriday-rules .text {
-    text-align: left;
-    max-width: 940px; }
-  #lf .luckyFriday-rules .text_conditional {
-    margin-bottom: 110px; }
-  #lf .footer.bg {
-    background: #EB1C24; }
-  #lf .footer .container {
-    color: #ffffff;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
     -webkit-justify-content: center;
+    -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: 940px;
-    width: 100%;
-    height: 100px; }
-  #lf .footer .footer__menu {
+            justify-content: center; }
+  #lf .pop-up .content__list {
     list-style: none;
     border: none;
+    text-align: center;
+    font-size: 24px;
+    line-height: 39px; }
+
+#lf .pop-up:nth-child(7) {
+  padding-left: 20px; }
+  #lf .pop-up:nth-child(7) .content__list {
+    text-align: left;
+    margin-right: 20px;
+    width: 300px; }
+  #lf .pop-up:nth-child(7) .content__list:last-child {
+    margin-right: 0; }
+
+#lf .popup-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.9); }
+  #lf .popup-form .snowflake-1 {
+    position: absolute;
+    top: 117px;
+    left: 132px; }
+  #lf .popup-form .snowflake-2 {
+    position: absolute;
+    top: 117px;
+    left: 494px; }
+  #lf .popup-form .snowflake-3 {
+    position: absolute;
+    top: 47px;
+    left: 896px; }
+  #lf .popup-form .snowflake-4 {
+    position: absolute;
+    top: 120px;
+    left: 1316px; }
+  #lf .popup-form .snowflake-5 {
+    position: absolute;
+    top: 323px;
+    left: 1544px; }
+  #lf .popup-form .snowflake-6 {
+    position: absolute;
+    top: 383px;
+    left: 348px; }
+  #lf .popup-form .snowflake-7 {
+    position: absolute;
+    top: 324px;
+    right: 1575px; }
+  #lf .popup-form .snowflake-8 {
+    position: absolute;
+    top: 620px;
+    left: 168px; }
+  #lf .popup-form .snowflake-9 {
+    position: absolute;
+    top: 561px;
+    left: 1392px; }
+  #lf .popup-form .snowflake-10 {
+    position: absolute;
+    top: 692px;
+    right: 1823px; }
+  #lf .popup-form .container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-right: 20px; }
-  #lf .footer .footer__menu_item {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    width: 645px; }
+  #lf .popup-form .title {
+    text-align: left; }
+  #lf .popup-form .img_santa {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    -webkit-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease; }
+    #lf .popup-form .img_santa.right {
+      left: 2500px;
+      bottom: 0; }
+    #lf .popup-form .img_santa.none {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; }
+  #lf .popup-form .text {
+    width: 580px;
+    text-align: left;
+    line-height: 28px; }
+  #lf .popup-form .form__item {
+    position: relative;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    cursor: pointer; }
+  #lf .popup-form .checkbox {
+    display: none; }
+  #lf .popup-form label {
+    padding-left: 35px;
+    cursor: pointer; }
+  #lf .popup-form .checkbox + label:before {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    content: "";
+    width: 24px;
+    height: 24px;
+    border: 2px solid #E0E0E0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-image: none; }
+  #lf .popup-form .checkbox:hover + label:before {
+    border: 2px solid #EB1C24; }
+  #lf .popup-form .checkbox:checked + label:before {
+    position: absolute;
+    left: 0px;
+    top: 1px;
+    width: 24px;
+    height: 24px;
+    content: "";
+    margin-right: 5px;
+    background-image: url(/ii/img/lucky-friday/check.svg);
+    border: none;
+    vertical-align: middle;
+    z-index: 6; }
+  #lf .popup-form .form__subscribe {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 50px; }
+  #lf .popup-form .email {
+    margin-right: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 320px; }
+    #lf .popup-form .email input {
+      width: 320px;
+      font-size: 24px;
+      line-height: 28px;
+      color: rgba(0, 0, 0, 0.8);
+      border: none;
+      outline: none;
+      margin-top: 21px;
+      background: transparent; }
+    #lf .popup-form .email input::-moz-placeholder, #lf .popup-form .email input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.3); }
+  #lf .popup-form .btn__subscribe {
+    width: 250px;
+    height: 72px;
+    font-size: 24px;
+    line-height: 28px;
+    background: #EB1C24;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    -webkit-border-radius: 36px;
+    border-radius: 36px;
+    font-size: 24px;
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
+            box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
+  #lf .popup-form .btn__subscribe:hover {
+    background: #D61B23; }
+  #lf .popup-form .form__message {
+    margin-top: 12px;
+    color: #EB1C24;
     font-size: 16px;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+    line-height: 19px; }
+
+#lf .header {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1260px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+#lf .header__logo {
+  margin: 20px 40px 20px 0; }
+
+#lf .menu {
+  list-style: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20px; }
+
+#lf .menu__item {
+  font-size: 19px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px; }
+
+#lf .menu a {
+  color: inherit;
+  opacity: 0.6;
+  text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#lf .menu a:hover {
+  opacity: 1; }
+
+#lf .menu .active {
+  opacity: 1; }
+
+#lf .luckyFriday-first {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: #eb1c24;
+  overflow: hidden; }
+  #lf .luckyFriday-first .snowflake-1 {
+    position: absolute;
+    top: 61px;
+    left: -140px; }
+  #lf .luckyFriday-first .snowflake-2 {
+    position: absolute;
+    top: 5px;
+    left: 464px; }
+  #lf .luckyFriday-first .snowflake-3 {
+    position: absolute;
+    top: 20px;
+    right: -47px; }
+  #lf .luckyFriday-first .snowflake-4 {
+    position: absolute;
+    top: 140px;
+    left: 248px; }
+  #lf .luckyFriday-first .snowflake-5 {
+    position: absolute;
+    top: 110px;
+    left: 408px; }
+  #lf .luckyFriday-first .snowflake-6 {
+    position: absolute;
+    top: 70px;
+    left: 719px; }
+  #lf .luckyFriday-first .snowflake-7 {
+    position: absolute;
+    top: 147px;
+    right: 235px; }
+  #lf .luckyFriday-first .snowflake-8 {
+    position: absolute;
+    top: 324px;
+    left: -220px; }
+  #lf .luckyFriday-first .snowflake-9 {
+    position: absolute;
+    top: 269px;
+    left: 62px; }
+  #lf .luckyFriday-first .snowflake-10 {
+    position: absolute;
+    top: 324px;
+    right: 119px; }
+  #lf .luckyFriday-first .snowflake-11 {
+    position: absolute;
+    top: 264px;
+    right: -124px; }
+  #lf .luckyFriday-first .snowflake-12 {
+    position: absolute;
+    top: 538px;
+    left: -21px; }
+  #lf .luckyFriday-first .snowflake-13 {
+    position: absolute;
+    top: 550px;
+    right: -8px; }
+  #lf .luckyFriday-first .snowflake-14 {
+    position: absolute;
+    top: 720px;
+    left: -124px; }
+  #lf .luckyFriday-first .snowflake-15 {
+    position: absolute;
+    top: 740px;
+    left: 124px; }
+  #lf .luckyFriday-first .snowflake-16 {
+    position: absolute;
+    bottom: 105px;
+    left: 372px; }
+  #lf .luckyFriday-first .snowflake-17 {
+    position: absolute;
+    bottom: 182px;
+    left: 48%; }
+  #lf .luckyFriday-first .snowflake-18 {
+    position: absolute;
+    bottom: 124px;
+    right: 394px; }
+  #lf .luckyFriday-first .snowflake-19 {
+    position: absolute;
+    bottom: 277px;
+    right: 267px; }
+  #lf .luckyFriday-first .snowflake-20 {
+    position: absolute;
+    bottom: 45px;
+    right: 101px; }
+  #lf .luckyFriday-first .snowflake-21 {
+    position: absolute;
+    bottom: 182px;
+    right: -145px; }
+  #lf .luckyFriday-first .luckyFriday-img_santa {
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+    -webkit-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease; }
+    #lf .luckyFriday-first .luckyFriday-img_santa.right {
+      left: 2500px;
+      bottom: 0; }
+    #lf .luckyFriday-first .luckyFriday-img_santa.none {
+      -webkit-transition: none;
+      -o-transition: none;
+      transition: none; }
+  #lf .luckyFriday-first .luckyFriday-img_down {
+    position: absolute;
+    bottom: 60px;
+    left: 48%;
+    cursor: pointer; }
+  #lf .luckyFriday-first .container {
+    margin-top: -32px;
+    -webkit-flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    color: #ffffff;
+    position: relative;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-right: 100px; }
-  #lf .footer .footer__menu_item:last-child {
-    margin-right: 0; }
-  #lf .footer .footer__menu a {
-    color: inherit;
-    opacity: 0.6;
-    text-decoration: none;
-    cursor: pointer;
-    height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -926,21 +715,324 @@
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  #lf .footer .footer__menu a:hover {
-    opacity: 1; }
-  #lf .hidden {
-    display: none; }
-  @media (max-width: 1060px) {
-    #lf .luckyFriday-klp .text {
-      margin-left: 60px; } }
-  @media (max-width: 1250px) {
-    #lf .popup-form .img_santa {
-      display: none; } }
-  @media (max-width: 1360px) {
-    #lf .header {
-      padding-left: 60px; } }
+            justify-content: center; }
+  #lf .luckyFriday-first .title {
+    margin-bottom: 0; }
+  #lf .luckyFriday-first .text {
+    margin-top: 40px;
+    text-align: center; }
+
+#lf .luckyFriday-im .container {
+  margin-top: 190px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+#lf .luckyFriday-im .text {
+  text-align: center; }
+
+#lf .luckyFriday-im .calendar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  cursor: pointer; }
+  #lf .luckyFriday-im .calendar .active, #lf .luckyFriday-im .calendar .active:hover {
+    outline: 6px solid #EB1C24;
+    z-index: 2; }
+    #lf .luckyFriday-im .calendar .active .date__img, #lf .luckyFriday-im .calendar .active:hover .date__img {
+      display: block; }
+
+#lf .luckyFriday-im .vertical-text {
+  position: absolute;
+  left: 0;
+  top: 350px; }
+
+#lf .luckyFriday-im .date {
+  width: 80px;
+  height: 80px;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-right: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 94px;
+  margin-top: 50px;
+  text-align: center; }
+
+#lf .luckyFriday-im .date:last-child {
+  border: solid 1px rgba(0, 0, 0, 0.1); }
+
+#lf .luckyFriday-im .date:hover {
+  border: 1px solid #EB1C24;
+  border-right: transparent; }
+
+#lf .luckyFriday-im .date:hover + .date {
+  border-left: 1px solid #EB1C24; }
+
+#lf .luckyFriday-im .date:hover:first-child {
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  border-right: transparent;
+  cursor: default; }
+
+#lf .luckyFriday-im .date:hover:first-child + .date {
+  border-left: solid 1px rgba(0, 0, 0, 0.1); }
+
+#lf .luckyFriday-im .date:hover:last-child {
+  cursor: default;
+  border: solid 1px rgba(0, 0, 0, 0.1); }
+
+#lf .luckyFriday-im .date__img {
+  position: absolute;
+  top: -50px;
+  display: none; }
+
+#lf .luckyFriday-im .date__day {
+  font-size: 36px;
+  font-weight: 900; }
+
+#lf .luckyFriday-im .date:last-child {
+  color: #EB1C24; }
+
+#lf .luckyFriday-im .date:first-child {
+  color: #EB1C24; }
+
+#lf .luckyFriday-im .date__month {
+  font-size: 14px;
+  font-weight: 500; }
+
+#lf .luckyFriday-im .btn {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 200px; }
+  #lf .luckyFriday-im .btn .btn__icon {
+    background: url(/ii/img/lucky-friday/bell.svg) no-repeat;
+    padding: 5px 30px 0 20px; }
+
+#lf .luckyFriday-im .btn__go {
+  width: 400px;
+  height: 72px;
+  margin-bottom: 200px; }
+  #lf .luckyFriday-im .btn__go .btn__icon {
+    background: url(/ii/img/lucky-friday/santa_btn.svg) no-repeat;
+    padding: 5px 50px 0 20px; }
+
+#lf .luckyFriday-map {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px; }
+  #lf .luckyFriday-map svg {
+    margin: 0 auto;
+    overflow: visible;
+    width: 100%; }
+  #lf .luckyFriday-map .region {
+    cursor: pointer;
+    -webkit-transition: all 150ms;
+    -o-transition: all 150ms;
+    transition: all 150ms; }
+    #lf .luckyFriday-map .region.active path, #lf .luckyFriday-map .region.full path, #lf .luckyFriday-map .region.full:hover path {
+      fill: #EB1C24; }
+    #lf .luckyFriday-map .region.active:hover path {
+      fill: #D61B23; }
+  #lf .luckyFriday-map .region:hover path {
+    fill: #CCCCCC; }
+  #lf .luckyFriday-map .marker {
+    cursor: pointer;
+    -webkit-transition: all 150ms;
+    -o-transition: all 150ms;
+    transition: all 150ms; }
+    #lf .luckyFriday-map .marker.active path {
+      fill-opacity: 1; }
+  #lf .luckyFriday-map .marker-full_30 {
+    cursor: pointer; }
+  #lf .luckyFriday-map .marker-full_14 {
+    cursor: pointer; }
+
+#lf .luckyFriday-klp .container {
+  position: relative;
+  margin-top: 190px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+#lf .luckyFriday-klp .text {
+  margin-bottom: 90px; }
+
+#lf .luckyFriday-klp .content {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-bottom: 130px; }
+
+#lf .luckyFriday-klp .content__text {
+  text-align: left;
+  margin-left: 45px;
+  line-height: 28px;
+  font-size: 24px; }
+
+#lf .luckyFriday-klp .vertical-text {
+  position: absolute;
+  left: 0;
+  top: 20px; }
+
+#lf .luckyFriday-rules .container {
+  position: relative;
+  margin-top: 190px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin-bottom: 110px; }
+
+#lf .luckyFriday-rules .text {
+  text-align: left;
+  max-width: 940px; }
+
+#lf .luckyFriday-rules .text_conditional {
+  margin-bottom: 110px; }
+
+#lf .footer.bg {
+  background: #EB1C24; }
+
+#lf .footer .container {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 940px;
+  width: 100%;
+  height: 100px; }
+
+#lf .footer .footer__menu {
+  list-style: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20px; }
+
+#lf .footer .footer__menu_item {
+  font-size: 16px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 100px; }
+
+#lf .footer .footer__menu_item:last-child {
+  margin-right: 0; }
+
+#lf .footer .footer__menu a {
+  color: inherit;
+  opacity: 0.6;
+  text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#lf .footer .footer__menu a:hover {
+  opacity: 1; }
+
+#lf .hidden {
+  display: none; }
+
+@media (max-width: 1060px) {
+  #lf .luckyFriday-klp .text {
+    margin-left: 60px; } }
+
+@media (max-width: 1250px) {
+  #lf .popup-form .img_santa {
+    display: none; } }
+
+@media (max-width: 1360px) {
+  #lf .header {
+    padding-left: 60px; } }

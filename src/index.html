@@ -6,17 +6,22 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <title>Скидки 20% и 30% на ВСЁ! Везучая пятница в «Читай-городе»!</title>
         <meta name="description" content="Этот день нельзя пропустить! Смотрите даты проведения акции, выбирайте книги и наслаждайтесь чтением. Скидка действует на сайте и в магазинах сети."/>
-        
-        <link href="/ii/css/lucky-friday/lucky_friday.css" rel="stylesheet" />       
+
+        <link href="/ii/css/common/popups.css" rel="stylesheet" /> 
+        <link href="/ii/css/common/helpers.css" rel="stylesheet" />
+        <link href="/ii/css/lucky-friday/lucky_friday.css" rel="stylesheet" />  
+
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
     
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);  })(window,document,'script', 'dataLayer','GTM-M569KV');</script>
     
         <script src="https://vk.com/js/api/openapi.js?144"></script>
 
     </head>
-<body id="lf">
+<body>
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M569KV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <script type="text/javascript">(function (d, w, c) {(w[c] = w[c] || []).push(function() {try {w.yaCounter6936841 = new Ya.Metrika({id:6936841,clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true,ecommerce:"dataLayer"});} catch(e) { }});var n = d.getElementsByTagName("script")[0],s = d.createElement("script"),f = function () { n.parentNode.insertBefore(s, n); };s.type = "text/javascript";s.async = true;s.src = "https://mc.yandex.ru/metrika/watch.js";if (w.opera == "[object Opera]") {d.addEventListener("DOMContentLoaded", f, false);} else { f(); }})(document, window, "yandex_metrika_callbacks");</script>
@@ -27,6 +32,20 @@
       VK.Retargeting.Hit();
     </script>
 
+    <div class="popup popup-city hidden">
+        <div class="step1">
+            <p class="text">Ваш город - <span id="yourCity">Москва</span></p>
+            <a id="cityYes" class="city__btn">Да</a>
+            <a class="city__btn" id="cityChange">Изменить</a>
+        </div>
+        <div class="step2">
+            <input type="text" placeholder="введите название своего города" id="citySearch" class="input">
+            <ul class="citySuggest"></ul>
+        </div>
+        <p class="descr">От выбранного города зависят способы доставки</p>
+    </div>
+
+    <div id="lf">
     <div class="popups">
         <div class="popup-form hidden">
             
@@ -63,7 +82,7 @@
                     <a href="https://www.chitai-gorod.ru/"class="link">На главную</a>
                     </div>
                 </div>
-                <form class="form" action="http://127.0.0.1:3005/" method="post">
+                <form class="form" action="#" method="post">
                     <div class="form__item">
                         <input type="checkbox" class="checkbox" name="checkbox-nov" id="checkbox-november" value="1"/>
                         <label for="checkbox-november">
@@ -98,7 +117,7 @@
         </div>
 
         <div class="popup-list">
-            <div class="popup hidden" data-popup="1">
+            <div class="pop-up hidden" data-popup="1">
                 <div class="container">
                     <div class="title">1 декабря</div>
                     <div class="text text_accent">
@@ -124,7 +143,7 @@
                     <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
                 </svg> 
             </div>
-            <div class="popup hidden" data-popup="2">
+            <div class="pop-up hidden" data-popup="2">
                 <div class="container">
                     <div class="title">2 декабря</div>
                     <div class="text text_accent">
@@ -142,7 +161,7 @@
                     <path fill="#e0e0e0" d="M 38.0005 12.82 L 35.1805 10 L 24.0005 21.18 L 12.8205 10 L 10.0005 12.82 L 21.1805 24 L 10.0005 35.18 L 12.8205 38 L 24.0005 26.82 L 35.1805 38 L 38.0005 35.18 L 26.8205 24 L 38.0005 12.82 Z" />
                 </svg>
             </div>
-            <div class="popup hidden" data-popup="3">
+            <div class="pop-up hidden" data-popup="3">
                 <div class="container">
                     <div class="title">3 декабря</div>
                     <div class="text text_accent">
@@ -167,7 +186,7 @@
                 </svg>
             </div>
 
-            <div class="popup hidden" data-popup="4">
+            <div class="pop-up hidden" data-popup="4">
                 <div class="container">
                     <div class="title">4 декабря</div>
                     <div class="text text_accent">
@@ -185,7 +204,7 @@
                 </svg>
             </div>
 
-            <div class="popup hidden" data-popup="5">
+            <div class="pop-up hidden" data-popup="5">
                 <div class="container">
                     <div class="title">5 декабря</div>
                     <div class="text text_accent">
@@ -210,7 +229,7 @@
                 </svg>
             </div>
 
-            <div class="popup hidden" data-popup="6">
+            <div class="pop-up hidden" data-popup="6">
                 <div class="container">
                     <div class="title">6 декабря</div>
                     <div class="text text_accent">
@@ -232,7 +251,7 @@
                 </svg>
             </div>
 
-            <div class="popup hidden" data-popup="7">
+            <div class="pop-up hidden" data-popup="7">
                 <div class="container">
                     <div class="title">7 декабря</div>
                     <div class="text text_accent">
@@ -310,7 +329,7 @@
             </div>
        
 
-            <div class="popup hidden" data-popup="8">
+            <div class="pop-up hidden" data-popup="8">
                 <div class="container">
                     <div class="title">8 декабря</div>
                     <div class="text text_accent">
@@ -386,7 +405,7 @@
                 <p class="title">Везучая пятница<br>в интернет-магазине</p>
                 
                 <p class="text">В этом году в каждом регионе будет своя Везучая пятница.</p>
-                <p class="text">Ваш город - <a class="link city">Петропавловск-Камчатский</a></p>
+                <p class="text">Ваш город - <a class="link user_city jsUserCity" id="city">Петропавловск-Камчатский</a></p>
                     
                 <div class="text__changeable text__changeable_go">
                     <p class="text text_accent">В вашем городе Везучая пятница будет проходить <span class="text_color text_date">2 декабря</span>
@@ -776,6 +795,11 @@
             </div>
         </div>
     </div>
+    </div>
+    <div id="mask" style="display: none;"></div>
+    <script src="/ii/js/classes/popup.js" type="text/javascript"></script>
+    <script src="/ii/js/classes/user-city.js" type="text/javascript"></script>
     <script src="/ii/js/lucky-friday/script.js" type="text/javascript"></script>
+    
 </body>
 </html>
