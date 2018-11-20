@@ -164,68 +164,12 @@ body {
     opacity: 0; } }
 
 #lf .blur-in {
-  -webkit-animation: blur 0.1s forwards;
-  animation: blur 0.1s forwards; }
+  -webkit-filter: blur(4px);
+          filter: blur(4px); }
 
 #lf .blur-out {
-  -webkit-animation: blur-out 0.1s forwards;
-  animation: blur-out 0.1s forwards; }
-
-@-webkit-keyframes blur {
-  0% {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px); } }
-
-@keyframes blur {
-  0% {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px); }
-  100% {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px); } }
-
-@-webkit-keyframes blur-out {
-  0% {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px); }
-  100% {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px); } }
-
-@keyframes blur-out {
-  0% {
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px); }
-  100% {
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px); } }
+  -webkit-filter: blur(0px);
+          filter: blur(0px); }
 
 #lf .close {
   position: absolute;
@@ -754,11 +698,17 @@ body {
           align-items: center;
   height: 100%;
   cursor: pointer; }
-  #lf .luckyFriday-im .calendar .active, #lf .luckyFriday-im .calendar .active:hover {
+  #lf .luckyFriday-im .calendar .active .bord, #lf .luckyFriday-im .calendar .active:hover .bord {
     outline: 6px solid #EB1C24;
     z-index: 2; }
-    #lf .luckyFriday-im .calendar .active .date__img, #lf .luckyFriday-im .calendar .active:hover .date__img {
-      display: block; }
+  #lf .luckyFriday-im .calendar .active .date__img, #lf .luckyFriday-im .calendar .active:hover .date__img {
+    display: block; }
+  #lf .luckyFriday-im .calendar .bord {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
 
 #lf .luckyFriday-im .vertical-text {
   position: absolute;
@@ -798,17 +748,9 @@ body {
 #lf .luckyFriday-im .date:hover + .date {
   border-left: 1px solid #EB1C24; }
 
-#lf .luckyFriday-im .date:hover:first-child {
-  border: solid 1px rgba(0, 0, 0, 0.1);
-  border-right: transparent;
-  cursor: default; }
-
-#lf .luckyFriday-im .date:hover:first-child + .date {
-  border-left: solid 1px rgba(0, 0, 0, 0.1); }
-
 #lf .luckyFriday-im .date:hover:last-child {
   cursor: default;
-  border: solid 1px rgba(0, 0, 0, 0.1); }
+  border: solid 1px #EB1C24; }
 
 #lf .luckyFriday-im .date__img {
   position: absolute;
