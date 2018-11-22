@@ -214,6 +214,7 @@ body
 			width: 100%
 			height: 100%
 			overflow: hidden
+			pointer-events: none
 
 		.snowflake-1
 			position: absolute
@@ -646,10 +647,10 @@ body
 			-moz-transition: all 150ms
 			-o-transition: all 150ms
 			transition: all 150ms
-			&.active, &.full, &.full:hover
+			&.active, &.full
 				path
 					fill: #EB1C24
-			&.active:hover
+			&.active:hover, &.full:hover
 				path
 					fill: #D61B23
 
