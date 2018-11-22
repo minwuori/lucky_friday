@@ -124,7 +124,8 @@ $(document).ready(function() {
 				}
 			}
 		}
-
+		email();
+		checkbox();
 		if (email() == true && checkbox() == true) {
 			 console.log( $( this ).serializeArray() );
 			 

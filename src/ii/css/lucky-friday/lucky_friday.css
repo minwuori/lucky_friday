@@ -283,7 +283,14 @@ body {
   left: 0;
   z-index: 2;
   background: rgba(255, 255, 255, 0.9);
-  overflow: scroll; }
+  overflow-y: scroll; }
+  .lf .popup-form .snowflakes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
   .lf .popup-form .snowflake-1 {
     position: absolute;
     top: 117px;
@@ -338,7 +345,8 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    width: 645px; }
+    width: 645px;
+    margin-bottom: 30px; }
   .lf .popup-form .title {
     text-align: left; }
   .lf .popup-form .img_santa {
@@ -536,6 +544,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  min-height: 750px;
   background: #eb1c24;
   overflow: hidden; }
   .lf .luckyFriday-first .snowflake-1 {
@@ -899,11 +908,22 @@ body {
   padding: 0; }
   .lf .luckyFriday-rules ol li:before {
     counter-increment: li;
-    content: counters(li, ".") ". "; }
+    content: counters(li, ".") ". ";
+    margin-right: 10px; }
 
-.lf .luckyFriday-rules ul {
+.lf .luckyFriday-rules ul li {
   list-style-type: disc;
   margin-left: 20px; }
+
+.lf .luckyFriday-rules ul li:before {
+  counter-increment: none;
+  content: none; }
+
+.lf .luckyFriday-rules .sublist {
+  margin: 40px 0 0 40px; }
+
+.lf .luckyFriday-rules .sublist-region {
+  margin: 20px 0 0 40px; }
 
 .lf .footer.bg {
   background: #EB1C24; }
