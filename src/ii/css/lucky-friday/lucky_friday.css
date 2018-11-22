@@ -345,8 +345,7 @@ body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
             flex-direction: column;
-    width: 645px;
-    margin-bottom: 30px; }
+    width: 645px; }
   .lf .popup-form .title {
     text-align: left; }
   .lf .popup-form .img_santa {
@@ -412,7 +411,8 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 50px; }
+    margin-top: 50px;
+    margin-bottom: 30px; }
   .lf .popup-form .email {
     margin-right: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -911,9 +911,12 @@ body {
     content: counters(li, ".") ". ";
     margin-right: 10px; }
 
-.lf .luckyFriday-rules ul li {
+.lf .luckyFriday-rules ul {
   list-style-type: disc;
   margin-left: 20px; }
+  .lf .luckyFriday-rules ul li {
+    list-style-type: disc;
+    margin-left: 20px; }
 
 .lf .luckyFriday-rules ul li:before {
   counter-increment: none;
@@ -1006,7 +1009,14 @@ body {
 
 @media (max-width: 1250px) {
   .lf .popup-form .img_santa {
-    display: none; } }
+    display: none; }
+  .lf .pop-up .content {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    max-width: 770px; }
+  .lf .pop-up:nth-child(7) .content__list:last-child {
+    margin-right: 20px; } }
 
 @media (max-width: 1360px) {
   .lf .header {

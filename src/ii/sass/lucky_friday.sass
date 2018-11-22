@@ -263,7 +263,6 @@ body
 			-ms-flex-direction: column
 			flex-direction: column
 			width: 645px 
-			margin-bottom: 30px
 		.title
 			text-align: left
 		.img_santa
@@ -330,6 +329,7 @@ body
 		.form__subscribe
 			display: flex
 			margin-top: 50px
+			margin-bottom: 30px
 
 		.email
 			margin-right: 20px;
@@ -786,6 +786,14 @@ body
 		.popup-form
 			.img_santa
 				display: none
+				
+		.pop-up
+			.content
+				flex-wrap: wrap;
+				max-width: 770px;
+		.pop-up:nth-child(7) 
+			.content__list:last-child 
+				margin-right: 20px;
 
 	@media(max-width: 1360px)
 		.header
