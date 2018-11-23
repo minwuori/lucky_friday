@@ -5,31 +5,31 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 
 		if ($(this).scrollTop() > 1){ 
-			$('.luckyFriday-img_santa').removeClass("none");
-			$('.luckyFriday-img_santa').addClass("right");
+			$('.luckyFriday-img_santa').removeClass('none');
+			$('.luckyFriday-img_santa').addClass('right');
 		}
 		else if ($(this).scrollTop() < 800){
-			$('.luckyFriday-img_santa').removeClass("right");
-			$('.luckyFriday-img_santa').addClass("none");
-			$(".menu__item").removeClass('active');
+			$('.luckyFriday-img_santa').removeClass('right');
+			$('.luckyFriday-img_santa').addClass('none');
+			$('.menu__item').removeClass('active');
 		}
 	});
 
 	//плавный скрол страницы при клике на меню header
 	$('.menu__item').click(function() {
 
-		$(".menu__item").removeClass('active');
+		$('.menu__item').removeClass('active');
 		$(this).addClass('active');
 		var hash=window.location.hash;
 		var anchor=$(this);
 
 		if(hash){
-		    $(".menu__item").removeClass("active");
-		    anchor.addClass("active");
+		    $('.menu__item').removeClass('active');
+		    anchor.addClass('active');
 		}
 
-		$("html, body").animate({
-		    scrollTop: $(anchor.attr("href")).offset().top - 190
+		$('html, body').animate({
+		    scrollTop: $(anchor.attr('href')).offset().top - 190
 		}, 1000);
 	});
 
@@ -39,8 +39,8 @@ $(document).ready(function() {
 		var hash=window.location.hash;
 		var anchor=$(this);
 
-		$("html, body").animate({
-		    scrollTop: $(anchor.attr("href")).offset().top - 190
+		$('html, body').animate({
+		    scrollTop: $(anchor.attr('href')).offset().top - 190
 		}, 1000);
 	});
 
@@ -79,7 +79,7 @@ $(document).ready(function() {
 	});
 
 
-	//клик на "Напомнить"
+	//клик на 'Напомнить'
 	$('.btn').click(function(){
 		$('.luckyFriday').removeClass('blur-out');
 		$('.luckyFriday').addClass('blur-in');
@@ -96,7 +96,7 @@ $(document).ready(function() {
 
 		function checkbox(){
 
-			if ($(".checkbox").is(":checked")) {
+			if ($('.checkbox').is(':checked')) {
 				$('.error-non-check').addClass('hidden');
 				return true;
 
@@ -115,11 +115,11 @@ $(document).ready(function() {
 
 				} else if (reg.test(validateElement[i].value) === false){
 					$('.error-empty-field').addClass('hidden');
-					$('.error-invalid-field').removeClass('hidden');
+					$('.error-invalid-field').text("Введите корректный email").removeClass('hidden');
 
 				} else {
 					$('.error-empty-field').addClass('hidden');
-					$('.error-invalid-field').addClass('hidden');
+					$('.error-invalid-field').text("Введите корректный email").removeClass('hidden');
 					return true;
 				}
 			}
@@ -127,7 +127,6 @@ $(document).ready(function() {
 		email();
 		checkbox();
 		if (email() == true && checkbox() == true) {
-			 console.log( $( this ).serializeArray() );
 			 
 			$.ajax({
 				type: $(this).attr('method'),
@@ -135,21 +134,24 @@ $(document).ready(function() {
 				data: $(this).serializeArray(),
 				cache: false,
 				success: function (res) {
-					console.log(res);
+					if (res.error)  {
+						$('.error-invalid-field').text('Что-то пошло не так').removeClass('hidden');
+						return;
+					}
 					$('form__message').addClass('hidden');
 					$('.popup-form .content').addClass('hidden');
 					$('.popup-form .form').addClass('hidden');
 					$('.popup-form .content__change').removeClass('hidden');
-					$('.img_santa').removeClass("none");
-					$('.img_santa').addClass("right");
+					$('.img_santa').removeClass('none');
+					$('.img_santa').addClass('right');
 				}
 			})
 		}	
 	});
 
 	function close(){
-		$('.img_santa').removeClass("right");
-		$('.img_santa').addClass("none");
+		$('.img_santa').removeClass('right');
+		$('.img_santa').addClass('none');
 		$('.popup-list .pop-up').addClass('hidden');
 		$('.popup-form').addClass('hidden');
 		$('body').css('overflow', 'auto');
@@ -157,7 +159,7 @@ $(document).ready(function() {
 		$('.luckyFriday').addClass('blur-out');
 	}
 
-	//клик на "Х" в popup
+	//клик на 'Х' в popup
 	$('.close, .content__change .link').click(function () { 
 	    close();
 	});
@@ -168,4 +170,159 @@ $(document).ready(function() {
 	    }
 	});
 
+	//проверка на дату
+
+	api.city.sale(function(res) {
+		if (res.result) {
+			var dayBegin = res.result, // дата в формате день.месяц.год (начало дня)
+			today = new Date(),
+			dayKlp = '2018-11-30T00:00:00',
+			dayKlpEnd = '2018-11-30T23:59:59',
+			dayX = '2018-12-14T00:00:00',
+			dayXEnd = '2018-12-14T23:59:59'
+			
+			//преобразование пришедшей даты в формат ГГГГ.ММ.ДД
+			dayBegin = dayBegin.split('.');
+			dayBegin = dayBegin[2]+'/'+dayBegin[1]+'/'+dayBegin[0] ;
+
+		 	dayBegin = new Date(Date.parse(dayBegin));
+			dayBegin.setDate(dayBegin.getDate());
+		 	var dayEnd; //(конец дня)
+			dayEnd = new Date(Date.parse(dayBegin));
+			dayEnd.setHours(dayBegin.getHours() + 23);
+			dayEnd.setMinutes(dayBegin.getMinutes() + 59);
+		 	dayKlp = new Date(Date.parse(dayKlp));
+			dayKlp.setDate(dayKlp.getDate());
+		 	dayKlpEnd = new Date(Date.parse(dayKlpEnd));
+			dayKlpEnd.setDate(dayKlpEnd.getDate());
+		 	dayX = new Date(Date.parse(dayX));
+			dayX.setDate(dayX.getDate());
+		 	dayXEnd = new Date(Date.parse(dayXEnd));
+			dayXEnd.setDate(dayXEnd.getDate());
+
+			function activeMap(){ 
+				//отметить день акции на календаре
+				$('.date').removeClass('active');
+				$('.date').each(function(elem){
+					if ($(this).data('date') == dayBegin.getDate()) {
+						$(this).addClass('active');
+					} 
+				});
+
+				//отметить активный регион на карте
+				$('.region').removeClass('active'); 
+				$('.region').each(function(elem){
+					if ($(this).data('region') == dayBegin.getDate()) {
+						$(this).addClass('active');
+					} 
+				});
+
+				//отметить активный маркер на карте
+				$('.marker').removeClass('active');
+				$('.marker').each(function(elem){
+					if ($(this).data('marker') == dayBegin.getDate()) {
+						$(this).addClass('active');
+					} 
+				});
+
+				$('.text_date').html(dayBegin.getDate() + ' декабря');
+			}
+
+			//если 30 ноября
+			if (today.getTime() >= dayKlp.getTime() && today.getTime() <= dayKlpEnd.getTime()){ 
+				$('.luckyFriday-map').addClass('hidden');
+				$('.luckyFriday-map_30nov').removeClass('hidden');
+
+				$('.text__changeable').addClass('hidden');
+				$('.text__changeable_klp').removeClass('hidden');
+
+				$('.btn').addClass('hidden');
+				$('.btn__go').removeClass('hidden');
+
+				$('.date').removeClass('active');
+				$('.date').each(function(elem){
+					if ($(this).data('date') == 30) {
+						$(this).addClass('active');
+					} 
+				});
+
+
+			// если 14 декабря
+		 	}else if (today.getTime() >= dayX.getTime() && today.getTime() <= dayXEnd.getTime()){ 
+				$('.luckyFriday-map').addClass('hidden');
+				$('.luckyFriday-map_14dec').removeClass('hidden');
+
+				$('.calendar').css('display', 'none');
+
+				$('.luckyFriday-im .text:eq(1)').css('display', 'none');
+				$('.luckyFriday-im .text:eq(0)').css('display', 'none');
+
+				$('.text__changeable').addClass('hidden');
+				$('.text__changeable_day-x').removeClass('hidden').css('margin-bottom', '60px');
+
+				$('.btn').addClass('hidden');
+				$('.btn__go').removeClass('hidden');
+
+				$('.date').removeClass('active');
+				$('.date').each(function(elem){
+					if ($(this).data('date') == 14) {
+						$(this).addClass('active');
+					} 
+				});
+
+				
+			// после 30 ноября
+			}else if (today.getTime() > dayKlp.getTime()) { 
+
+				//день акции
+				if (today.getTime() >= dayBegin.getTime() && today.getTime() <= dayEnd.getTime()) {
+					$('.text__changeable').addClass('hidden');
+					$('.text__changeable_day').removeClass('hidden');
+
+					$('.btn').addClass('hidden');
+					$('.btn__go').removeClass('hidden');
+
+					activeMap();
+
+				//день акции прошел
+				}else if (today.getTime() > dayEnd.getTime()){ 
+					$('.luckyFriday-map').addClass('hidden');
+					$('.luckyFriday-map_14dec').removeClass('hidden');
+
+					$('.text__changeable').addClass('hidden');
+					$('.text__changeable_after-day').removeClass('hidden');
+
+					$('.btn__go').addClass('hidden');
+					$('.btn').removeClass('hidden');
+
+					$('.date').removeClass('active');
+					$('.date').each(function(elem){
+						if ($(this).data('date') == 14) {
+							$(this).addClass('active');
+						} 
+					});
+
+				//день акции еще не наступил
+			 	} else { 
+					$('.text__changeable').addClass('hidden');
+					$('.text__changeable_not-day').removeClass('hidden');
+
+					$('.btn__go').removeClass('hidden');
+					$('.btn').css('display', 'block');
+					
+					activeMap();
+				}
+			
+			
+			// до 30 ноября
+			} else {
+				activeMap();
+			}
+
+		}else {
+		
+		}
+	});
+	 	
+	 	
 });

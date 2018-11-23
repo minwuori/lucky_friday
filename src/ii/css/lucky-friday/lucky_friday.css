@@ -1022,3 +1022,7 @@ body {
 @media (max-width: 1360px) {
   .lf .header {
     padding-left: 60px; } }
+    
+@media (max-height: 700px) {
+  .lf .popup-form .img_santa {
+    display: none; } }
