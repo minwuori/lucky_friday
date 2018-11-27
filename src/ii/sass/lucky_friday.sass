@@ -19,6 +19,8 @@ body
 	line-height: 35px;
 	-webkit-transition: .3s;
 	transition: .3s;
+.hidden
+	display: none
 
 .lf 
 	a
@@ -64,7 +66,7 @@ body
 		font-size: 24px
 		line-height: 26px
 		text-align: center
-		margin-bottom: 40px
+		margin-bottom: 30px
 	.text_accent
 		font-weight: 900
 		
@@ -83,14 +85,14 @@ body
 		color: #CB1B22
 		
 	.vertical-text
-		writing-mode: tb-rl
-		transform:rotate(360deg)
+		transform: rotateZ(270deg);
+		transform-origin: 50% 50%;
 		background: #EB1C24
 		color: #ffffff
 		font-size: 24px
 		line-height: 28px
-		height: 440px
-		width: 60px
+		height: 60px
+		width: 440px
 		display: flex
 		align-items: center
 		justify-content: center	
@@ -105,7 +107,8 @@ body
 		-webkit-border-radius: 36px 
 		border-radius: 36px 
 		font-size: 24px
-		box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25)
+		box-shadow: 0px 10px 20px 0px rgba(235, 28, 36, 0.25)
+		font-family: Roboto, sans-serif 
 		
 	button:hover
 		background: #D61B23
@@ -131,7 +134,7 @@ body
 			opacity: 0
 			
 	.blur-in
-		filter: blur(4px)
+		filter: blur(10px)
 
 	.blur-out
 		filter: blur(0px)
@@ -206,6 +209,8 @@ body
 		z-index: 2
 		background: rgba(255, 255, 255, 0.9)
 		overflow-y: scroll
+		-ms-overflow-x: hidden
+		overflow-x: hidden
 
 		.snowflakes
 			position: absolute
@@ -219,12 +224,12 @@ body
 		.snowflake-1
 			position: absolute
 			top: 117px
-			left: 132px
+			right: 1777px
 			
 		.snowflake-2
 			position: absolute
-			top: 117px
-			left: 494px
+			top: 120px;
+			right: 1474px;
 		.snowflake-3
 			position: absolute
 			top: 47px
@@ -235,28 +240,28 @@ body
 			left: 1316px
 		.snowflake-5
 			position: absolute
-			top: 323px;
-			left: 1544px;
+			top: 120px;
+			left: 1644px;
 		.snowflake-6
 			position: absolute
 			top: 383px
-			left: 348px
+			left: 1575px
 		.snowflake-7
 			position: absolute
-			top: 324px
+			top: 383px
 			right: 1575px
 		.snowflake-8
 			position: absolute
 			top: 620px
-			left: 168px
+			right: 1768px
 		.snowflake-9
 			position: absolute
-			top: 561px
+			top: 620px
 			left: 1392px
 		.snowflake-10
 			position: absolute
 			top: 692px
-			right: 1823px
+			left: 1823px
 		.container
 			display: flex
 			align-items: flex-start
@@ -346,8 +351,10 @@ body
 				outline: none;
 				margin-top: 21px;
 				background: transparent
+				font-family: Roboto, sans-serif
 			input::-moz-placeholder, input::-webkit-input-placeholder
 				color: rgba(0, 0, 0, 0.3);
+				font-family: Roboto, sans-serif 
 
 		.btn__subscribe
 			width: 250px
@@ -391,7 +398,7 @@ body
 		justify-content: flex-end
 		margin-right: 20px
 	.menu__item
-		font-size: 19px
+		font-size: 16px
 		height: 100%
 		display: flex
 		align-items: center
@@ -520,7 +527,7 @@ body
 
 		.luckyFriday-img_down
 			position: absolute
-			bottom: 60px
+			bottom: 40px
 			left: 48%
 			cursor: pointer
 
@@ -537,7 +544,7 @@ body
 			margin-bottom: 0
 
 		.text
-			margin-top: 40px
+			margin-top: 5px
 			text-align: center
 			
 	.luckyFriday-im
@@ -569,9 +576,8 @@ body
 				top: 0
 				left: 0
 		.vertical-text		
-			position: absolute
-			left: 0
-			top: 350px
+			left: -190px
+			display: none
 
 		.date
 			width: 80px
@@ -632,7 +638,7 @@ body
 				
 	.luckyFriday-map
 		position: relative
-		width: 100%
+		width: 87%
 		display: flex
 		justify-content: center
 		margin-bottom: 100px
@@ -694,10 +700,9 @@ body
 			margin-left: 45px
 			line-height: 28px
 			font-size: 24px
-		.vertical-text		
-			position: absolute
-			left: 0
-			top: 20px
+		.vertical-text	
+			left: -190px
+			display: none
 			
 	.luckyFriday-rules
 		.container
@@ -748,7 +753,7 @@ body
 			align-items: center
 			max-width: 940px
 			width: 100%
-			height: 100px
+			height: 80px
 		.footer__menu
 			list-style: none
 			border: none
@@ -777,8 +782,10 @@ body
 	.hidden
 		display: none
 			
-	@media(max-width: 1060px)
-		
+	@media(max-width: 1150px)
+		.luckyFriday-im
+			.text_padding
+				margin-left: 60px
 		.luckyFriday-klp
 			.text
 				margin-left: 60px

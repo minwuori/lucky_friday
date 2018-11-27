@@ -4,6 +4,31 @@ $(document).ready(function() {
     //анимашка санты на главной
 	$(window).scroll(function() {
 
+		var first = $('.luckyFriday-first').outerHeight(true);
+		var second = $('.luckyFriday-im').outerHeight(true);
+
+		var sale20 = $('.luckyFriday-im .vertical-text');
+		var im = $('.luckyFriday-im');
+
+		var sale30 = $('.luckyFriday-klp .vertical-text');
+		var klp = $('.luckyFriday-klp');
+
+	    var topIm = im.offset().top;
+	    var bottomIm = topIm + im.outerHeight(true) - 650;
+
+	    var topKlp = klp.offset().top;
+	    var bottomKlp = first + second + second/5;
+	    
+	    if ($(document).scrollTop() > first/1.5) { sale20.css('position','fixed').css('display', 'flex'); }
+	    else { sale20.css('display','none'); }
+	    if ($(document).scrollTop()  >bottomIm) { sale20.css('top', bottomIm + $(document).scrollTop()).css('display','none'); }
+	    else { sale20.css('top', '48%'); }
+
+	    if ($(document).scrollTop() > second + first/2) {  sale30.css('position','fixed').css('display', 'flex'); }
+	    else { sale30.css('display','none'); }
+	    if ($(document).scrollTop() > bottomKlp) { sale30.css('top', bottomKlp + $(document).scrollTop()).css('display','none'); }
+	    else { sale30.css('top', '48%'); }
+
 		if ($(this).scrollTop() > 1){ 
 			$('.luckyFriday-img_santa').removeClass('none');
 			$('.luckyFriday-img_santa').addClass('right');
@@ -12,7 +37,8 @@ $(document).ready(function() {
 			$('.luckyFriday-img_santa').removeClass('right');
 			$('.luckyFriday-img_santa').addClass('none');
 			$('.menu__item').removeClass('active');
-		}
+		} 
+	
 	});
 
 	//плавный скрол страницы при клике на меню header
@@ -102,6 +128,8 @@ $(document).ready(function() {
 
 			} else{
 				$('.error-non-check').removeClass('hidden');
+				return false;
+
 			}
 		}
 
@@ -112,21 +140,27 @@ $(document).ready(function() {
 			for (var i = 0; i < validateElement.length; i++) {
 				if (validateElement[i].value == '') {
 					$('.error-empty-field').removeClass('hidden');
+					return false;
 
 				} else if (reg.test(validateElement[i].value) === false){
 					$('.error-empty-field').addClass('hidden');
 					$('.error-invalid-field').text("Введите корректный email").removeClass('hidden');
+					return false;
 
 				} else {
 					$('.error-empty-field').addClass('hidden');
-					$('.error-invalid-field').text("Введите корректный email").removeClass('hidden');
+					$('.error-invalid-field').addClass('hidden');
 					return true;
 				}
 			}
 		}
-		email();
-		checkbox();
-		if (email() == true && checkbox() == true) {
+		var validForm = checkbox();
+		if (validForm == true) {
+			validForm = email();
+		} else {
+			email();
+		}
+		if (validForm == true) {
 			 
 			$.ajax({
 				type: $(this).attr('method'),

@@ -24,6 +24,9 @@ body {
   -o-transition: .3s;
   transition: .3s; }
 
+.hidden {
+  display: none; }
+
 .lf a {
   text-decoration: underline;
   color: black; }
@@ -68,7 +71,7 @@ body {
   font-size: 24px;
   line-height: 26px;
   text-align: center;
-  margin-bottom: 40px; }
+  margin-bottom: 30px; }
 
 .lf .text_accent {
   font-weight: 900; }
@@ -89,15 +92,18 @@ body {
   color: #CB1B22; }
 
 .lf .vertical-text {
-  -webkit-writing-mode: tb-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: tb-rl;
+  -webkit-transform: rotateZ(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotateZ(270deg);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
   background: #EB1C24;
   color: #ffffff;
   font-size: 24px;
   line-height: 28px;
-  height: 440px;
-  width: 60px;
+  height: 60px;
+  width: 440px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,8 +127,9 @@ body {
   -webkit-border-radius: 36px;
   border-radius: 36px;
   font-size: 24px;
-  -webkit-box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25);
-          box-shadow: 10px 10px 20px 0px rgba(235, 28, 36, 0.25); }
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(235, 28, 36, 0.25);
+          box-shadow: 0px 10px 20px 0px rgba(235, 28, 36, 0.25);
+  font-family: Roboto, sans-serif; }
 
 .lf button:hover {
   background: #D61B23; }
@@ -164,8 +171,8 @@ body {
     opacity: 0; } }
 
 .lf .blur-in {
-  -webkit-filter: blur(4px);
-          filter: blur(4px); }
+  -webkit-filter: blur(10px);
+          filter: blur(10px); }
 
 .lf .blur-out {
   -webkit-filter: blur(0px);
@@ -283,7 +290,9 @@ body {
   left: 0;
   z-index: 2;
   background: rgba(255, 255, 255, 0.9);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden; }
   .lf .popup-form .snowflakes {
     position: absolute;
     top: 0;
@@ -295,11 +304,11 @@ body {
   .lf .popup-form .snowflake-1 {
     position: absolute;
     top: 117px;
-    left: 132px; }
+    right: 1777px; }
   .lf .popup-form .snowflake-2 {
     position: absolute;
-    top: 117px;
-    left: 494px; }
+    top: 120px;
+    right: 1474px; }
   .lf .popup-form .snowflake-3 {
     position: absolute;
     top: 47px;
@@ -310,28 +319,28 @@ body {
     left: 1316px; }
   .lf .popup-form .snowflake-5 {
     position: absolute;
-    top: 323px;
-    left: 1544px; }
+    top: 120px;
+    left: 1644px; }
   .lf .popup-form .snowflake-6 {
     position: absolute;
     top: 383px;
-    left: 348px; }
+    left: 1575px; }
   .lf .popup-form .snowflake-7 {
     position: absolute;
-    top: 324px;
+    top: 383px;
     right: 1575px; }
   .lf .popup-form .snowflake-8 {
     position: absolute;
     top: 620px;
-    left: 168px; }
+    right: 1768px; }
   .lf .popup-form .snowflake-9 {
     position: absolute;
-    top: 561px;
+    top: 620px;
     left: 1392px; }
   .lf .popup-form .snowflake-10 {
     position: absolute;
     top: 692px;
-    right: 1823px; }
+    left: 1823px; }
   .lf .popup-form .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -426,9 +435,11 @@ body {
       border: none;
       outline: none;
       margin-top: 21px;
-      background: transparent; }
+      background: transparent;
+      font-family: Roboto, sans-serif; }
     .lf .popup-form .email input::-moz-placeholder, .lf .popup-form .email input::-webkit-input-placeholder {
-      color: rgba(0, 0, 0, 0.3); }
+      color: rgba(0, 0, 0, 0.3);
+      font-family: Roboto, sans-serif; }
   .lf .popup-form .btn__subscribe {
     width: 250px;
     height: 72px;
@@ -489,7 +500,7 @@ body {
   margin-right: 20px; }
 
 .lf .menu__item {
-  font-size: 19px;
+  font-size: 16px;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -648,7 +659,7 @@ body {
       transition: none; }
   .lf .luckyFriday-first .luckyFriday-img_down {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 48%;
     cursor: pointer; }
   .lf .luckyFriday-first .container {
@@ -674,7 +685,7 @@ body {
   .lf .luckyFriday-first .title {
     margin-bottom: 0; }
   .lf .luckyFriday-first .text {
-    margin-top: 40px;
+    margin-top: 5px;
     text-align: center; }
 
 .lf .luckyFriday-im .container {
@@ -722,9 +733,8 @@ body {
     left: 0; }
 
 .lf .luckyFriday-im .vertical-text {
-  position: absolute;
-  left: 0;
-  top: 350px; }
+  left: -190px;
+  display: none; }
 
 .lf .luckyFriday-im .date {
   width: 80px;
@@ -800,7 +810,7 @@ body {
 
 .lf .luckyFriday-map {
   position: relative;
-  width: 100%;
+  width: 87%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -873,9 +883,8 @@ body {
   font-size: 24px; }
 
 .lf .luckyFriday-klp .vertical-text {
-  position: absolute;
-  left: 0;
-  top: 20px; }
+  left: -190px;
+  display: none; }
 
 .lf .luckyFriday-rules .container {
   position: relative;
@@ -948,7 +957,7 @@ body {
           align-items: center;
   max-width: 940px;
   width: 100%;
-  height: 100px; }
+  height: 80px; }
 
 .lf .footer .footer__menu {
   list-style: none;
@@ -1004,7 +1013,9 @@ body {
 .lf .hidden {
   display: none; }
 
-@media (max-width: 1060px) {
+@media (max-width: 1150px) {
+  .lf .luckyFriday-im .text_padding {
+    margin-left: 60px; }
   .lf .luckyFriday-klp .text {
     margin-left: 60px; } }
 
@@ -1022,7 +1033,3 @@ body {
 @media (max-width: 1360px) {
   .lf .header {
     padding-left: 60px; } }
-    
-@media (max-height: 700px) {
-  .lf .popup-form .img_santa {
-    display: none; } }
