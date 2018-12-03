@@ -279,11 +279,13 @@ $(document).ready(function() {
 						$(this).addClass('active');
 					} 
 				});
+				$('.text_date').html(dayBegin.getDate() + ' декабря');
 
 
 			// если 14 декабря
 		 	}else if (today.getTime() >= dayX.getTime() && today.getTime() <= dayXEnd.getTime()){ 
 				$('.luckyFriday-map').addClass('hidden');
+				$('.luckyFriday-map_30nov').addClass('hidden');
 				$('.luckyFriday-map_14dec').removeClass('hidden');
 
 				$('.calendar').css('display', 'none');
@@ -316,11 +318,16 @@ $(document).ready(function() {
 					$('.btn').addClass('hidden');
 					$('.btn__go').removeClass('hidden');
 
+					$('.luckyFriday-map').removeClass('hidden');
+					$('.luckyFriday-map_30nov').addClass('hidden');
+					$('.luckyFriday-map_14dec').addClass('hidden');
+
 					activeMap();
 
 				//день акции прошел
 				}else if (today.getTime() > dayEnd.getTime()){ 
 					$('.luckyFriday-map').addClass('hidden');
+					$('.luckyFriday-map_30nov').addClass('hidden');
 					$('.luckyFriday-map_14dec').removeClass('hidden');
 
 					$('.text__changeable').addClass('hidden');
@@ -328,6 +335,9 @@ $(document).ready(function() {
 
 					$('.btn__go').addClass('hidden');
 					$('.btn').removeClass('hidden');
+
+					$('.form__item:eq(0)').css('display', 'none');
+					$('.form__item:eq(1)').css('display', 'none');
 
 					$('.date').removeClass('active');
 					$('.date').each(function(elem){
@@ -341,8 +351,14 @@ $(document).ready(function() {
 					$('.text__changeable').addClass('hidden');
 					$('.text__changeable_not-day').removeClass('hidden');
 
-					$('.btn__go').removeClass('hidden');
-					$('.btn').css('display', 'block');
+					$('.luckyFriday-map').removeClass('hidden');
+					$('.luckyFriday-map_30nov').addClass('hidden');
+					$('.luckyFriday-map_14dec').addClass('hidden');
+
+					$('.btn__go').addClass('hidden');
+					$('.btn').removeClass('hidden');
+
+					$('.form__item:eq(0)').css('display', 'none');
 					
 					activeMap();
 				}
